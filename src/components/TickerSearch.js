@@ -4,20 +4,28 @@ import axios from 'axios';
 function TickerSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const cacheKey = 'tickerSearchCache';
 
   useEffect(() => {
     const fetchSearchResults = async () => {
+      const cachedData = localStorage.getItem(cacheKey);
       if (searchTerm.length > 2) {
-        const response = await axios.get('https://www.alphavantage.co/query', {
-          params: {
-            function: 'SYMBOL_SEARCH',
-            keywords: searchTerm,
-            apikey: 'JPTB584R5KKH8FOW'
-          }
-        });
-        // print api call result
-        console.log(response);
-        setSearchResults(response.data.bestMatches);
+
+        if(cachedData) {
+          setSearchResults(JSON.parse(cachedData));
+        } else {
+          const response = await axios.get('https://www.alphavantage.co/query', {
+            params: {
+              function: 'SYMBOL_SEARCH',
+              keywords: searchTerm,
+              apikey: 'JPTB584R5KKH8FOW'
+            }
+          });
+          // print api call result
+          console.log(response);
+          setSearchResults(response.data.bestMatches);
+          localStorage.setItem(cacheKey, JSON.stringify(response.data.bestMatches))
+        }
       } else {
         setSearchResults([]);
       }

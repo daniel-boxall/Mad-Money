@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 function StockData() {
@@ -14,6 +14,7 @@ function StockData() {
           apikey: 'JPTB584R5KKH8FOW'
         }
       });
+      // print api call result
       setData(response.data);
     }
     fetchData();

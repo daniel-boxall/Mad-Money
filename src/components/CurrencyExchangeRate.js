@@ -28,6 +28,7 @@ function CurrencyExchangeRate({ fromCurrency, toCurrency }) {
 
   return (
     <div>
+      <h1>Alphavantage - FX</h1>
       <h2>Converting from {exchangeRate['1. From_Currency Code']} to {exchangeRate['3. To_Currency Code']}</h2>
       <p>Exchange rate: {exchangeRate['5. Exchange Rate']}</p>
       <p>Last refresh: {exchangeRate['6. Last Refreshed']}</p>

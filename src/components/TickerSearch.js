@@ -44,6 +44,8 @@ function TickerSearch() {
 
   return (
     <div>
+      <h1>Alphavantage - TickerSearch</h1>
+      <h2>Be aware of api call limit！</h2>
       <input type='text' value={searchTerm} onChange={handleSearchTermChange}></input>
       <ul>
         {searchResults.map((result) => (

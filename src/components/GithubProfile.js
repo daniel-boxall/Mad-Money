@@ -28,6 +28,7 @@ function GithubProfile({ username }) {
 
   return (
     <div>
+      <h1>Github User API</h1>
       <h2>{userData.name}</h2>
       <img src={userData.avatar_url} alt='github avatar'></img>
       <p>Bio: {userData.bio}</p>

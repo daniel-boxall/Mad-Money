@@ -54,6 +54,8 @@ const SearchBox = () => {
 
   return (
     <div>
+      <h1>Alphavantage - TickerSearch</h1>
+      <h2>Be aware of api call limit！</h2>
       <input type="text" value={query} onChange={handleChange} />
       {showDropdown && results.length > 0 && (
         <ul>

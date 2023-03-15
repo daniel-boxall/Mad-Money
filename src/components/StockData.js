@@ -31,6 +31,7 @@ function StockData() {
 
   return (
     <div>
+      <h1>Alphavantage - TIME_SERIES_INTRADAY</h1>
       <h2>{data['Meta Data']['2. Symbol']}</h2>
       <p>OpenL {latestData['1. open']}</p>
       <p>High: {latestData['2. high']}</p>

@@ -26,6 +26,7 @@ function CompanyOverview() {
 
   return (
     <div>
+      <h1>Alphavantage - Company Overview</h1>
       <h2>{overview['Symbol']}</h2>
       <p>Name: {overview['Name']}</p>
       <p>Desc: {overview['Description']}</p>

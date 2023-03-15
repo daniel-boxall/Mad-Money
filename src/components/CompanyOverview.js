@@ -9,13 +9,13 @@ function CompanyOverview() {
       const response = await axios.get('https://www.alphavantage.co/query', {
         params: {
           function: 'OVERVIEW',
-          symbol: 'MSFT',
+          symbol: 'AAPL',
           apikey: 'JPTB584R5KKH8FOW'
         }
       });
       // print api call result
-      console.log(response);
-      setOverview(response);
+      console.log(response.data);
+      setOverview(response.data);
     }
     fetchData();
   }, []);

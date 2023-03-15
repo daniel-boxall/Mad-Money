@@ -15,6 +15,7 @@ function StockData() {
         }
       });
       // print api call result
+      console.log(response.data);
       setData(response.data);
     }
     fetchData();
@@ -23,8 +24,9 @@ function StockData() {
   if (!data) {
     return <div>Loading...</div>;
   }
-
+  // Object.keys() to get an array of the keys; then get the first one
   const latestTimestamp = Object.keys(data['Time Series (5min)'])[0];
+  // get the key corresponding data
   const latestData = data['Time Series (5min)'][latestTimestamp];
 
   return (

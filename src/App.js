@@ -6,6 +6,7 @@ import StockData from './components/StockData.js'
 // import SearchBox from './components/SearchBox';
 import CompanyOverview from './components/CompanyOverview';
 import CurrencyExchangeRate from './components/CurrencyExchangeRate';
+import LightweightChart from './components/LightweightChart.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <StockData />
       <CompanyOverview />
       <CurrencyExchangeRate fromCurrency={'GBP'} toCurrency={'CNY'} />
+      <LightweightChart />
       {/* <SearchBox /> */}
       {/* <TickerSearch /> */}
     </div>

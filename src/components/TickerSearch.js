@@ -4,13 +4,17 @@ import axios from 'axios';
 function TickerSearch() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const cacheKey = 'tickerSearchCache';
+  
 
   useEffect(() => {
-    const fetchSearchResults = async () => {
-      const cachedData = localStorage.getItem(cacheKey);
-      if (searchTerm.length > 2) {
+    // query key for caching query data
+    const cacheKey = 'search_' + searchTerm;
 
+    const fetchSearchResults = async (searchTerm) => {
+      // try get cached data
+      const cachedData = localStorage.getItem(cacheKey);
+
+      if (searchTerm.length > 0) {
         if(cachedData) {
           setSearchResults(JSON.parse(cachedData));
         } else {

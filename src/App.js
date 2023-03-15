@@ -3,7 +3,8 @@ import './App.css';
 // import GithubProfile from './components/GithubProfile';
 // import StockData from './components/StockData.js'
 // import TickerSearch from './components/TickerSearch';
-import SearchBox from './components/SearchBox';
+// import SearchBox from './components/SearchBox';
+import CompanyOverview from './components/CompanyOverview';
 // import CurrencyExchangeRate from './components/CurrencyExchangeRate';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <h1>Hello World!</h1>
       {/* <GithubProfile username={'DJ-86'} /> */}
       {/* <StockData /> */}
-      <SearchBox />
+      <CompanyOverview />
       {/* <CurrencyExchangeRate fromCurrency={'GBP'} toCurrency={'CNY'} /> */}
     </div>
   );

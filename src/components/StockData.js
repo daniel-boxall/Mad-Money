@@ -14,13 +14,12 @@ function StockData({ selectedValue }) {
           apikey: 'JPTB584R5KKH8FOW'
         }
       });
-      // print api call result
-      console.log(response.data);
+      // change state of data
       setData(response.data);
     }
     fetchData();
   }, [selectedValue]);
-
+  // dummy loading state
   if (!data) {
     return <div>Loading...</div>;
   }

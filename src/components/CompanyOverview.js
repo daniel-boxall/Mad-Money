@@ -13,13 +13,12 @@ function CompanyOverview({ selectedCompany }) {
           apikey: 'JPTB584R5KKH8FOW'
         }
       });
-      // print api call result
-      console.log(response.data);
+      // change state of overview
       setOverview(response.data);
     }
     fetchData();
   }, [selectedCompany]);
-
+  // dummy loading state
   if (!overview) {
     return <div>Loading...</div>;
   }

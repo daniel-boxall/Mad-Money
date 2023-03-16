@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '@material-ui/core';
-import StockData from './StockData.js';
+// import StockData from './StockData.js';
+import CompanyOverview from './CompanyOverview.js';
 
 export default function AutocompleteExample() {
   const options = [
-    { value: 'APPL', label: 'APPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
+    { value: 'AAPL', label: 'APPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
     { value: 'MSFT', label: 'MSFT - Microsoft Corp', logo: 'https://companiesmarketcap.com//img/company-logos/64/MSFT.webp' },
     { value: 'AMZN', label: 'AMZN - Amazon.com, Inc.', logo: 'https://companiesmarketcap.com//img/company-logos/64/AMZN.webp' },
     { value: 'TSLA', label: 'TSLA - Tesla Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/TSLA.webp' },
@@ -19,7 +20,7 @@ export default function AutocompleteExample() {
     { value: 'ADBE', label: 'ADCE - Adobe Systems Incorporated', logo: 'https://companiesmarketcap.com//img/company-logos/64/ADBE.webp' },
   ];
 
-  const [selectedValue, setSelectedValue] = useState({ value: 'APPL' });
+  const [selectedValue, setSelectedValue] = useState({ value: 'AAPL' });
 
   const handleChange = (event, newValue) => {
     setSelectedValue(newValue);
@@ -55,7 +56,7 @@ export default function AutocompleteExample() {
         )}
       />
       {selectedValue && <p>You selected: {selectedValue.value}</p>}
-      {/* <StockData selectedValue={selectedValue.value} /> */}
+      <CompanyOverview selectedCompany={selectedValue.value} />
     </div>
   );
 };

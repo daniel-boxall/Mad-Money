@@ -1,5 +1,6 @@
 
 import './App.css';
+import AutocompleteExample from './components/Autocomplete';
 // import AutocompleteField from './components/Autocomplete';
 // import GithubProfile from './components/GithubProfile';
 import StockData from './components/StockData.js'
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World!</h1>
-      <StockData />
+      <AutocompleteExample />
     </div>
   );
 }

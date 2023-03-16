@@ -32,6 +32,7 @@ export default function AutocompleteExample() {
         options={options}
         getOptionLabel={(option) => option.label}
         getOptionSelected={(option, value) => option.value === value.value}
+        disableClearable
         fullWidth
         onChange={handleChange}
         renderOption={option => {

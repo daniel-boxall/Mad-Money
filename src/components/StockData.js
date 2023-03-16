@@ -23,13 +23,17 @@ function StockData() {
   if (!data) {
     return <div>Loading...</div>;
   }
-  // Object.keys() to get an array of the keys; then get the first one
+  // meta data of the stock data
+  // TODO: pass the meta data as chart legend
   const metaData = data['Meta Data'];
-  const timeSeries = data['Monthly Time Series'];
   const symbol = metaData['2. Symbol'];
   const lastRefreshed = metaData['3. Last Refreshed'];
   const timeZone = metaData['4. Time Zone'];
-  console.log(timeSeries);
+
+  // monthly time series of the stock data
+  // TODO: pass the data to lightweight chart
+  const monthlyTimeSeries = data['Monthly Time Series'];
+  console.log(monthlyTimeSeries);
 
   return (
     <div>

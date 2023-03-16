@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '@material-ui/core';
-// import StockData from './StockData.js';
+import StockData from './StockData.js';
 
 export default function AutocompleteExample() {
   const options = [
@@ -19,7 +19,7 @@ export default function AutocompleteExample() {
     { value: 'ADBE', label: 'ADCE - Adobe Systems Incorporated', logo: 'https://companiesmarketcap.com//img/company-logos/64/ADBE.webp' },
   ];
 
-  const [selectedValue, setSelectedValue] = useState(null);
+  const [selectedValue, setSelectedValue] = useState({ value: 'APPL' });
 
   const handleChange = (event, newValue) => {
     setSelectedValue(newValue);
@@ -27,6 +27,7 @@ export default function AutocompleteExample() {
 
   return (
     <div>
+      <h1>Autocomplete Component</h1>
       <Autocomplete
         options={options}
         getOptionLabel={(option) => option.label}
@@ -53,7 +54,7 @@ export default function AutocompleteExample() {
         )}
       />
       {selectedValue && <p>You selected: {selectedValue.value}</p>}
-      {/* <StockData selectedValue={selectedValue.value} /> */}
+      <StockData selectedValue={selectedValue.value} />
     </div>
   );
 };

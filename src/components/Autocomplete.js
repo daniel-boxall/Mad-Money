@@ -55,7 +55,7 @@ export default function AutocompleteExample() {
         )}
       />
       {selectedValue && <p>You selected: {selectedValue.value}</p>}
-      <StockData selectedValue={selectedValue.value} />
+      {/* <StockData selectedValue={selectedValue.value} /> */}
     </div>
   );
 };

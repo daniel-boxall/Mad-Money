@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import LightweightChart from "./LightweightChart";
+// import LightweightChart from "./LightweightChart";
+import StockChart from "./StockChart";
 
 function StockData({ selectedValue }) {
   const [data, setData] = useState(null);
@@ -44,6 +45,7 @@ function StockData({ selectedValue }) {
       <p>Time Zone: {timeZone}</p>
       <p>{lastRefreshed}</p>
       {/* <LightweightChart seriesData={monthlyTimeSeries} /> */}
+      <StockChart seriesData={monthlyTimeSeries} />
     </div>
   );
 }

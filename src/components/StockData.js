@@ -33,7 +33,7 @@ function StockData({ selectedValue }) {
   // monthly time series of the stock data
   // TODO: pass the data to lightweight chart
   const monthlyTimeSeries = data['Monthly Time Series'];
-  console.log(monthlyTimeSeries);
+  // console.log(monthlyTimeSeries);
 
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
   return (
@@ -43,7 +43,7 @@ function StockData({ selectedValue }) {
       <p>Last Refreshed: {lastRefreshed}</p>
       <p>Time Zone: {timeZone}</p>
       <p>{lastRefreshed}</p>
-      <LightweightChart seriesData={monthlyTimeSeries} />
+      {/* <LightweightChart seriesData={monthlyTimeSeries} /> */}
     </div>
   );
 }

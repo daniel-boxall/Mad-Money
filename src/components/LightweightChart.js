@@ -12,9 +12,9 @@ const LightweightChart = ({seriesData}) => {
       ele.value = parseInt(seriesData[key]['4. close']);
       monthlyData.push(ele);
   }
-  console.log(`logging out monthlyData: ${monthlyData}`);
-  let data = monthlyData.reverse();
 
+  let data = monthlyData.reverse();
+  // TODO duplicate chart instances bug
   useEffect(() => {
     const chart = createChart(document.getElementById('chart'), { width: 600, height: 300 });
     const lineSeries = chart.addLineSeries();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-function StockData() {
+function StockData({ selectedValue }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ function StockData() {
       const response = await axios.get('https://www.alphavantage.co/query', {
         params: {
           function: 'TIME_SERIES_MONTHLY',
-          symbol: 'AAPL',
+          symbol: selectedValue,
           apikey: 'JPTB584R5KKH8FOW'
         }
       });
@@ -18,7 +18,7 @@ function StockData() {
       setData(response.data);
     }
     fetchData();
-  }, []);
+  }, [selectedValue]);
 
   if (!data) {
     return <div>Loading...</div>;

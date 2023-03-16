@@ -35,6 +35,7 @@ function StockData({ selectedValue }) {
   const monthlyTimeSeries = data['Monthly Time Series'];
   console.log(monthlyTimeSeries);
 
+  // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
   return (
     <div>
       <h1>StockData component</h1>

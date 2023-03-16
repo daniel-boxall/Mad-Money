@@ -3,7 +3,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '@material-ui/core';
 // import StockData from './StockData.js';
-// import CompanyOverview from './CompanyOverview.js';
+import CompanyOverview from './CompanyOverview.js';
 import StockData from './StockData.js';
 
 export default function AutocompleteExample() {
@@ -57,7 +57,7 @@ export default function AutocompleteExample() {
         )}
       />
       {selectedValue && <p>You selected: {selectedValue.value}</p>}
-      {/* <CompanyOverview selectedCompany={selectedValue.value} /> */}
+      <CompanyOverview selectedCompany={selectedValue.value} />
       <StockData selectedValue={selectedValue.value} />
     </div>
   );

@@ -22,7 +22,9 @@ function CompanyOverview({ selectedCompany }) {
   if (!overview) {
     return <div>Loading...</div>;
   }
-
+  // example json output https://www.alphavantage.co/query?function=OVERVIEW&symbol=IBM&apikey=demo
+  // you can choose what to use
+  
   return (
     <div>
       <h1>Company Overview Component</h1>

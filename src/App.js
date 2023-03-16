@@ -10,12 +10,13 @@ import StockData from './components/StockData.js'
 // import CurrencyExchangeRate from './components/CurrencyExchangeRate';
 // import LightweightChart from './components/LightweightChart.js';
 // import AutocompleteExample from './components/Autocomplete';
+import HelloWorld from './components/TestDotEnv';
 
 function App() {
   return (
     <div className="App">
       <h1>Hello World!</h1>
-      <AutocompleteExample />
+      <HelloWorld />
     </div>
   );
 }

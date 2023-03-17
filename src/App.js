@@ -18,11 +18,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import TickerSearch from './components/TickerSearch';
 // import SearchBox from './components/SearchBox';
 
-
-
+import CompanyOverview from './components/CompanyOverview';
+import CurrencyExchangeRate from './components/CurrencyExchangeRate';
+import LightweightChart from './components/LightweightChart.js';
+import CurrencyConverter from './components/CurrencyConverter';
+import CurrencyProvider from './components/context/CurrencyContext';
 import Navbar from './components/Navbar.js';
 
+
 function App() {
+  
   return (
     <div className="App">
       <Router>

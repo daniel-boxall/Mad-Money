@@ -11,7 +11,7 @@ function CurrencyExchangeRate({ fromCurrency, toCurrency }) {
           function: 'CURRENCY_EXCHANGE_RATE',
           from_currency: fromCurrency,
           to_currency: toCurrency,
-          apikey: 'JPTB584R5KKH8FOW'
+          apikey: process.env.REACT_APP_API_KEY
         }
       });
       // print api call return result

@@ -10,7 +10,7 @@ function CompanyOverview({ selectedCompany }) {
         params: {
           function: 'OVERVIEW',
           symbol: selectedCompany,
-          apikey: 'JPTB584R5KKH8FOW'
+          apikey: process.env.REACT_APP_API_KEY
         }
       });
       // change state of overview
@@ -38,7 +38,10 @@ function CompanyOverview({ selectedCompany }) {
   
     return val.toFixed(2) + " " + abbreviations[i];
   }
-  console.log(overview);
+  
+  // logging out api call json result
+  // console.log(overview);
+
   const marketCap = displayBigMoney(parseInt(overview['MarketCapitalization']));
   const grossProfit = displayBigMoney(parseInt(overview['GrossProfitTTM']));
   const fiftytwoWeekHigh = parseInt(overview['52WeekHigh']);

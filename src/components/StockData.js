@@ -12,7 +12,7 @@ function StockData({ selectedValue }) {
         params: {
           function: 'TIME_SERIES_MONTHLY',
           symbol: selectedValue,
-          apikey: 'JPTB584R5KKH8FOW'
+          apikey: process.env.REACT_APP_API_KEY
         }
       });
       // change state of data

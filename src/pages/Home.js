@@ -1,16 +1,16 @@
 import React from 'react';
 import AutocompleteExample from '../components/Autocomplete';
-import CurrencyConverter from '../components/CurrencyConverter';
-import CurrencyProvider from '../components/context/CurrencyContext';
+import { Button } from '../components/Button';
+import { Link } from 'react-router-dom';
+
 
 function Home() {
     return (
         <>
-            <h1>Hello World!</h1>
+            <h1>Welcome! To Mad Money</h1>
+            <Link to='Currency'><Button buttonStyle='btn--outline'>Check The Currency Prices</Button></Link>
             <AutocompleteExample />
-            <CurrencyProvider>
-                <CurrencyConverter />
-            </CurrencyProvider>
+           
         </>
     );
 }

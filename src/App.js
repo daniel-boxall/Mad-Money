@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Footer from './components/Footer.js'
 import Home from './pages/Home.js'
 import Team from './pages/Team.js';

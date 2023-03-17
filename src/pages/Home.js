@@ -1,15 +1,16 @@
 import React from 'react';
-import '../../App.css';
-import StockData from '../components/StockData';
-import CompanyOverview from '../components/CompanyOverview';
-import CurrencyExchangeRate from '../components/CurrencyExchangeRate';
-import LightweightChart from '../components/LightweightChart';
+import AutocompleteExample from '../components/Autocomplete';
+import CurrencyConverter from '../components/CurrencyConverter';
+import CurrencyProvider from '../components/context/CurrencyContext';
 
 function Home() {
     return (
         <>
             <h1>Hello World!</h1>
             <AutocompleteExample />
+            <CurrencyProvider>
+                <CurrencyConverter />
+            </CurrencyProvider>
         </>
     );
 }

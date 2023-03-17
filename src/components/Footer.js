@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 import ButtonMailto from './ButtonMailto';
 import { Link } from 'react-router-dom';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
   return (
@@ -12,18 +14,35 @@ function Footer() {
                   <div className='row'>
                       <div className='column'>
                           <h2 className='name'>David Jones</h2>
+                          <Link to='https://linkedin.com/in/'><LinkedInIcon fontSize='large' /></Link>
+                          <br/>
+                          <Link to='https://github.com/DJ-86'><GitHubIcon fontSize='large'/></Link>
+                          <br></br>
+                          <ButtonMailto label='Email' mailto='#'/>
                       </div>
                       <div className='column'>
                           <h2 className='name'>Daniel Boxall</h2>
-                          <Link to='https://github.com/daniel-boxall'>Github</Link>
+                          <Link to='https://linkedin.com/in/daniel-boxall-34a951257'><LinkedInIcon fontSize='large' /></Link>
+                          <br/>
+                          <Link to='https://github.com/daniel-boxall'><GitHubIcon fontSize='large'/></Link>
                           <br></br>
-                          <ButtonMailto label="Email" mailto='mailto:danielboxall07@gmail.com' />
+                          <ButtonMailto label='Email' mailto='mailto:danielboxall07@gmail.com'/>
                       </div>
                       <div className='column'>
                           <h2 className='name'>Shah hoque</h2>
+                          <Link to='https://linkedin.com/in/'><LinkedInIcon fontSize='large' /></Link>
+                          <br/>
+                          <Link to='https://github.com/shah-hoque'><GitHubIcon fontSize='large'/></Link>
+                          <br></br>
+                          <ButtonMailto label='Email' mailto='#'/>
                       </div>
                       <div className='column'>
                           <h2 className='name'>Dali Han</h2>
+                          <Link to='https://linkedin.com/in/'><LinkedInIcon fontSize='large' /></Link>
+                          <br/>
+                          <Link to='https://github.com/dearbojack'><GitHubIcon fontSize='large'/></Link>
+                          <br></br>
+                          <ButtonMailto label='Email' mailto='#'/>
                       </div>
                   </div>
                 

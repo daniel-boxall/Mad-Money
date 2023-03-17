@@ -28,7 +28,7 @@ function CurrencyConverter() {
     if(firstAmount) {
       axios("https://api.freecurrencyapi.com/v1/latest", {
         params: {
-          apikey: "1XI1zziRXSOEkLNmydqVmH4pg343sLXg8sBDSvgk",
+          apikey: process.env.REACT_APP_KEY ,
           base_currency: codeFromCurrency,
           currencies: codeToCurrency
         }

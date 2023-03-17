@@ -7,6 +7,7 @@ const SelectCountry = (props) => {
   const [data, loaded, error] = useAxios("https://restcountries.com/v3.1/all")
   
   if(loaded) {
+    console.log('this one' + data)
     return (
       <Grid item xs={12} md={3}>
         <Skeleton variant="rounded" height={60} />
@@ -22,7 +23,8 @@ if(error) {
     return `${item.flag} ${Object.keys(item.currencies)[0]} - ${item.name.common}`
     
   }) 
-  
+  console.log(dataCountries)
+
   return (
     <Grid item xs={12} md={3}>
       <Autocomplete

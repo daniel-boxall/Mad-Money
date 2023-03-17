@@ -4,7 +4,8 @@ import Button from '../Button';
 
 function Currency() {
     return (
-
+        <>
+        </>
     );
 }
 

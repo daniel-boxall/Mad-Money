@@ -9,10 +9,12 @@ function Home() {
     return (
         <>
             <h1>Hello World!</h1>
-      <StockData />
-      <CompanyOverview />
-      <CurrencyExchangeRate fromCurrency={'GBP'} toCurrency={'CNY'} />
-      <LightweightChart />
+            <HelloWorld />
+            <StockData />
+            <CompanyOverview />
+            <CurrencyExchangeRate fromCurrency={'GBP'} toCurrency={'CNY'} />
+            <LightweightChart />
+            <AutocompleteExample />
       {/* <SearchBox /> */}
       {/* <TickerSearch /> */}
         </>

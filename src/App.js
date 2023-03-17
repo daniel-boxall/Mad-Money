@@ -8,6 +8,7 @@ import CompanyOverview from './components/CompanyOverview';
 import CurrencyExchangeRate from './components/CurrencyExchangeRate';
 import LightweightChart from './components/LightweightChart.js';
 import CurrencyConverter from './components/CurrencyConverter';
+import CurrencyProvider from './components/context/CurrencyContext';
 
 
 
@@ -16,8 +17,10 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World!</h1>
-      
-        <CurrencyConverter />
+      <CurrencyProvider>
+      <CurrencyConverter />
+      </CurrencyProvider>
+        
       
       
       <GithubProfile username={'dearbojack'} />

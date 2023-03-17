@@ -19,15 +19,15 @@ if(error) {
 }
   const dataFilter = data.filter(item => "currencies" in item);
   const dataCountries = dataFilter.map(item => {
-    console.log(dataFilter)
     return `${item.flag} ${Object.keys(item.currencies)[0]} - ${item.name.common}`
     
   }) 
-  console.log(dataCountries)
+  
   return (
     <Grid item xs={12} md={3}>
       <Autocomplete
         value={value}
+        disableClearable
         onChange={(event, newValue) => {
           setValue(newValue);
         }}

@@ -1,12 +1,16 @@
 import React from 'react'
 import { Grid,  Button } from '@mui/material'
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
+import './CurrencyConverter.css'
 
 const SwitchCurrency = () => {
   return (
-    <Grid item>
-        <Button>
-        <CompareArrowsIcon />
+    <Grid item xs={12} md="auto">
+        <Button sx={{
+            borderRadius: 1,
+            height: "100%"
+        }}>
+        <CompareArrowsIcon sx={{fontSize: 30}}/>
         </Button>
     </Grid>
   )

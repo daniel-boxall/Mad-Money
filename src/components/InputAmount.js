@@ -2,9 +2,8 @@ import React from 'react';
 import { Grid, InputAdornment, TextField } from '@mui/material';
 
 const InputAmount = () => {
-  console.log('firing');
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} md>
       <TextField
       label="Amount"
       fullWidth

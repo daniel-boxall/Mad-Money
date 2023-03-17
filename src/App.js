@@ -9,11 +9,17 @@ import CurrencyExchangeRate from './components/CurrencyExchangeRate';
 import LightweightChart from './components/LightweightChart.js';
 import CurrencyConverter from './components/CurrencyConverter';
 
+
+
 function App() {
+  
   return (
     <div className="App">
       <h1>Hello World!</h1>
-      <CurrencyConverter />
+      
+        <CurrencyConverter />
+      
+      
       <GithubProfile username={'dearbojack'} />
       <StockData />
       <CompanyOverview />

@@ -1,13 +1,38 @@
 import React from 'react'
-import { Autocomplete, Grid, TextField } from '@mui/material'
+import { Autocomplete, Skeleton, Grid, TextField } from '@mui/material'
+import useAxios from './hooks/useAxios'
 
-const SelectCountry = () => {
+const SelectCountry = (props) => {
+  const { value, setValue, label } = props
+  const [data, loaded, error] = useAxios("https://restcountries.com/v3.1/all")
+  
+  if(loaded) {
+    return (
+      <Grid item xs={12} md={3}>
+        <Skeleton variant="rounded" height={60} />
+      </Grid>
+    )
+  } 
+
+if(error) {
+  return "Something went wrong"
+}
+  const dataFilter = data.filter(item => "currencies" in item);
+  const dataCountries = dataFilter.map(item => {
+    console.log(dataFilter)
+    return `${item.flag} ${Object.keys(item.currencies)[0]} - ${item.name.common}`
+    
+  }) 
+  console.log(dataCountries)
   return (
-    <Grid item xs={12}>
+    <Grid item xs={12} md={3}>
       <Autocomplete
-        value="option1"
-        options={["option1", "option2"]}
-        renderInput={(params) => <TextField {...params} label="From" />} 
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        options={dataCountries}
+        renderInput={(params) => <TextField {...params} label={label} />} 
         />
     </Grid>
   )

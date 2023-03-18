@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Grid, InputAdornment, TextField } from '@mui/material';
+import { Grid, TextField } from '@mui/material';
 import { CurrencyContext } from './context/CurrencyContext';
 
 const InputAmount = () => {
@@ -12,10 +12,8 @@ const InputAmount = () => {
       onChange={e => setFirstAmount(e.target.value)}
       label="Amount"
       fullWidth
-      inputProps={{
-        type: "number",
-        startAdornment: <InputAdornment position="start">$</InputAdornment>
-        
+      InputProps={{
+        type: "number"        
       }} 
       />
     </Grid>

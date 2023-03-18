@@ -1,5 +1,5 @@
 import React from 'react';
-import GithubProfile from '../GithubProfile.js';
+import GithubProfile from '../components/GithubProfile.js';
 
 function Team() {
     return (

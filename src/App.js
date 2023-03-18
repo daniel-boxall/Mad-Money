@@ -20,8 +20,8 @@ function App() {
               <Route path='Team' element={<Team />} />
               <Route path='Currency' element={<Currency />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer/>
       </Router>  
     </div>
   );

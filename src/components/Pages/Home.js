@@ -4,16 +4,16 @@ import StockData from '../StockData';
 import CompanyOverview from '../CompanyOverview';
 import CurrencyExchangeRate from '../CurrencyExchangeRate';
 import LightweightChart from '../LightweightChart';
+import CurrencyProvider from '../context/CurrencyContext';
+import CurrencyConverter from '../CurrencyConverter';
+import AutocompleteExample from '../Autocomplete';
 
 function Home() {
     return (
         <>
-            <h1>Hello World!</h1>
-            <HelloWorld />
-            <StockData />
-            <CompanyOverview />
-            <CurrencyExchangeRate fromCurrency={'GBP'} toCurrency={'CNY'} />
-            <LightweightChart />
+        <CurrencyProvider>
+            <CurrencyConverter />
+        </CurrencyProvider>
             <AutocompleteExample />
       {/* <SearchBox /> */}
       {/* <TickerSearch /> */}

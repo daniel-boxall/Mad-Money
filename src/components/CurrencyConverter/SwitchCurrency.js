@@ -1,7 +1,6 @@
 import React from 'react'
 import { Grid,  Button } from '@mui/material'
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
-import './CurrencyConverter.css'
 import { useContext } from 'react';
 import { CurrencyContext } from './context/CurrencyContext';
 

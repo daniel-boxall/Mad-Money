@@ -48,6 +48,9 @@ function CurrencyConverter() {
     padding: "4rem 2rem",
     boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
     position: "relative",
+    marginTop: 0,
+    marginBottom: 0,
+
   };
 
   return (
@@ -60,6 +63,7 @@ function CurrencyConverter() {
 
 
     <Grid item xs={12} sm={12} md={12}>
+      
       <Container maxWidth="md" sx={boxStyles}>
         <Typography variant="h5" sx={{ marginBottom: "2rem" }}>
           Currency Converter

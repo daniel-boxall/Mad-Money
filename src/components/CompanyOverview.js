@@ -61,24 +61,24 @@ function CompanyOverview({ selectedCompany }) {
     <>
 
 
-      <Grid container>
+      {/* <Grid container> */}
 
 
       {selectedCompany && <h2>{selectedCompany} Overview</h2>}
-      <h2>{symbol}</h2>
-      <p>Name: {name}</p>
+      {/* <h2>{symbol}</h2> */}
+      {/* <p>Name: {name}</p> */}
       <p>Description: {description}</p>
-      <p>Exchange: {exchange}</p>
       <p>Sector: {sector}</p>
+      <p>Exchange: {exchange}</p>
       <p>Market Capitalization: {marketCap} {currency}</p>
       <p>Gross Proft: {grossProfit} {currency}</p>
       {/* <p>PERatio: {PERatio}</p> */}
       <p>Currency: {currency}</p>
-      <p>52-wk high: {fiftytwoWeekHigh}</p>
-      <p>52-wk low: {fiftytwoWeekLow}</p>
+      <p>52-Wk High: {fiftytwoWeekHigh}</p>
+      <p>52-Wk Low: {fiftytwoWeekLow}</p>
 
 
-      </Grid>
+      {/* </Grid> */}
 
 
 

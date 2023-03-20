@@ -28,9 +28,9 @@ function Navbar() {
         <>
           <nav className="navbar">
               <div className="navbar-container">
-                  <Link to="/" className="navbar-logo">
+                  {/* <Link to="/" className="navbar-logo">
                       Mad Money
-                  </Link> 
+                  </Link>  */}
                   <div className='menu-icon' onClick={handleClick}>
                       <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                   </div>
@@ -45,8 +45,14 @@ function Navbar() {
                               Currency
                           </Link>
                       </li>
+                  <li className='nav-item'>
+                          <Link to='Team' className='nav-links' onClick={closeMobileMenu}>
+                            About us
+                          </Link>
+                      </li>
                   </ul>
-                  <Link to='Team'><Button buttonStyle='btn--outline'>Meet The Team</Button></Link>
+
+
                 </div>
             </nav>
         </>

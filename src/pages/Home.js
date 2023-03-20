@@ -9,7 +9,7 @@ function Home() {
     return (
         <>
             <h1>Welcome! To Mad Money</h1>
-            <Link to='Currency'><Button buttonStyle='btn--outline'>Check The Currency Prices</Button></Link>
+            {/* <Link to='Currency'><Button buttonStyle='btn--outline'>Check The Currency Prices</Button></Link> */}
             <AutocompleteExample />
         </>
     );

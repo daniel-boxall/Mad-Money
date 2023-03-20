@@ -52,10 +52,19 @@ function CurrencyConverter() {
 
   return (
     <>
+
+    <Grid container>
+
+
+
+
+
+    <Grid item xs={12} sm={12} md={12}>
       <Container maxWidth="md" sx={boxStyles}>
         <Typography variant="h5" sx={{ marginBottom: "2rem" }}>
           Currency Converter
         </Typography>
+        
         <Grid container spacing={2}>
           <InputAmount />
           <SelectCountry
@@ -87,6 +96,11 @@ function CurrencyConverter() {
           ""
         )}
       </Container>
+      
+    </Grid>
+
+
+    <Grid item xs={12} sm={12} md={12}>
       <Container maxWidth="md" sx={boxStyles} style={{ textAlign: "left" }}>
         <Typography>
           1 {toCurrency} = {resultCurrency} {fromCurrency}
@@ -113,10 +127,21 @@ function CurrencyConverter() {
           1000 {toCurrency} = {resultCurrency * 1000} {fromCurrency}
         </Typography>
       </Container>
+      
+    </Grid>
+
+
+
+    </Grid>
+
+
+
+
+
+
+
     </>
   );
 }
 
 export default CurrencyConverter;
-
-test

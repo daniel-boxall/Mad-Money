@@ -29,7 +29,8 @@ export default function AutocompleteExample() {
 
   return (
     <div>
-      {/* <h1>Autocomplete Component</h1> */}
+      <h1>Track Top Tech Stocks </h1>
+
       <Autocomplete
         options={options}
         getOptionLabel={(option) => option.label}
@@ -56,7 +57,10 @@ export default function AutocompleteExample() {
           <TextField {...params} label="Select an option" variant="outlined" />
         )}
       />
-      {selectedValue && <p>You selected: {selectedValue.value}</p>}
+      
+      {/* {selectedValue && <p>You selected: {selectedValue.value}</p>} */}
+
+
       <CompanyOverview selectedCompany={selectedValue.value} />
       {/* <StockData selectedValue={selectedValue.value} /> */}
       

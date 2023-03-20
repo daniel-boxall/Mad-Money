@@ -57,8 +57,8 @@ function CompanyOverview({ selectedCompany }) {
 
   return (
     <div>
-      <h1>Company Overview Component</h1>
-      {selectedCompany && <h2>You selected {selectedCompany}</h2>}
+      {/* <h1>Company Overview Component</h1> */}
+      {selectedCompany && <h2>{selectedCompany} Overview</h2>}
       <h2>{symbol}</h2>
       <p>Name: {name}</p>
       <p>Description: {description}</p>

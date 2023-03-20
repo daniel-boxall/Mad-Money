@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Grid } from "@mui/material";
+
 
 function CompanyOverview({ selectedCompany }) {
   const [overview, setOverview] = useState({});
@@ -56,8 +58,12 @@ function CompanyOverview({ selectedCompany }) {
   const sector = overview['Sector'];
 
   return (
-    <div>
-      {/* <h1>Company Overview Component</h1> */}
+    <>
+
+
+      <Grid container>
+
+
       {selectedCompany && <h2>{selectedCompany} Overview</h2>}
       <h2>{symbol}</h2>
       <p>Name: {name}</p>
@@ -70,7 +76,14 @@ function CompanyOverview({ selectedCompany }) {
       <p>Currency: {currency}</p>
       <p>52-wk high: {fiftytwoWeekHigh}</p>
       <p>52-wk low: {fiftytwoWeekLow}</p>
-    </div>
+
+
+      </Grid>
+
+
+
+    </>
+
   );
 }
 

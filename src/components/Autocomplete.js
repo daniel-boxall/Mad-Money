@@ -29,7 +29,7 @@ export default function AutocompleteExample() {
 
   return (
     <div>
-      <h1>Autocomplete Component</h1>
+      {/* <h1>Autocomplete Component</h1> */}
       <Autocomplete
         options={options}
         getOptionLabel={(option) => option.label}

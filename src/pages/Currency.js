@@ -1,6 +1,7 @@
 import React from 'react';
 import CurrencyConverter from '../components/CurrencyConverter';
 import CurrencyProvider from '../components/context/CurrencyContext';
+import News from '../components/StockNews';
 
 
 

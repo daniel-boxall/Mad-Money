@@ -15,7 +15,7 @@ function CurrencyConverter() {
     toCurrency,
     setToCurrency,
     firstAmount,
-    setFirstAmount,
+    // setFirstAmount,
   } = useContext(CurrencyContext);
   const [resultCurrency, setResultCurrency] = useState(0);
   const codeFromCurrency = fromCurrency.split(" ")[1];
@@ -48,7 +48,7 @@ function CurrencyConverter() {
     padding: "4rem 2rem",
     boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
     position: "relative",
-    marginTop: 0,
+    // marginTop: 0,
     marginBottom: 0,
 
   };

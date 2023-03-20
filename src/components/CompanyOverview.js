@@ -52,8 +52,8 @@ function CompanyOverview({ selectedCompany }) {
   // const dividendYield = parseInt(overview['DividendYield']);
   const currency = overview['Currency'];
   const exchange = overview['Exchange'];
-  const symbol = overview['Symbol'];
-  const name = overview['Name'];
+  // const symbol = overview['Symbol'];
+  // const name = overview['Name'];
   const description = overview['Description'];
   const sector = overview['Sector'];
 
@@ -61,7 +61,7 @@ function CompanyOverview({ selectedCompany }) {
     <>
 
 
-      {/* <Grid container> */}
+      <Grid container>
 
 
       {selectedCompany && <h2>{selectedCompany} Overview</h2>}
@@ -78,7 +78,7 @@ function CompanyOverview({ selectedCompany }) {
       <p>52-Wk Low: {fiftytwoWeekLow}</p>
 
 
-      {/* </Grid> */}
+      </Grid>
 
 
 

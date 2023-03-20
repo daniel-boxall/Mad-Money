@@ -1,7 +1,7 @@
 import React from 'react';
 import AutocompleteExample from '../components/Autocomplete';
-import { Button } from '../components/Button';
-import { Link } from 'react-router-dom';
+// import { Button } from '../components/Button';
+// import { Link } from 'react-router-dom';
 
 
 

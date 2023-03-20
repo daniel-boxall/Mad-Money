@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Box } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 // import StockData from './StockData.js';
 import CompanyOverview from './CompanyOverview.js';
 // import StockData from './StockData.js';
@@ -27,8 +27,30 @@ export default function AutocompleteExample() {
     setSelectedValue(newValue);
   };
 
+
+  const homepstyle = {
+    background: "#0000FF",
+    marginTop: "10rem",
+    textAlign: "center",
+    color: "#222",
+    minHeight: "20rem",
+    borderRadius: 2,
+    padding: "4rem 2rem",
+    boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
+    position: "relative",
+    marginBottom: 0,
+
+  };
   return (
-    <div>
+    <>
+
+      <Grid container >
+
+      <Grid item xs={3} sm={3} md={5} sx={homepstyle}>
+
+
+
+
       <h1>Track Top Tech Stocks </h1>
 
       <Autocomplete
@@ -57,13 +79,34 @@ export default function AutocompleteExample() {
           <TextField {...params} label="Select an option" variant="outlined" />
         )}
       />
-      
+
+
+
+
+
+
+
+      </Grid>
+
+
+
+
+
+
+
+
+
+
+      </Grid>
+
+
+
       {/* {selectedValue && <p>You selected: {selectedValue.value}</p>} */}
 
 
       <CompanyOverview selectedCompany={selectedValue.value} />
       {/* <StockData selectedValue={selectedValue.value} /> */}
       
-    </div>
+    </>
   );
 };

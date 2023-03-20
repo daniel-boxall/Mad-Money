@@ -21,7 +21,7 @@ function App() {
               <Route path='Currency' element={<Currency />} />
           </Routes>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>  
     </div>
   );

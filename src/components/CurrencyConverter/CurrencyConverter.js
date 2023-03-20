@@ -56,7 +56,7 @@ function CurrencyConverter() {
   return (
     <>
 
-    <Grid container>
+<Grid container style={{ minHeight: "70vh" }}>
 
 
 

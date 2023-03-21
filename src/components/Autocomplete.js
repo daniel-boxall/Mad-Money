@@ -31,17 +31,21 @@ export default function AutocompleteExample() {
  
   // STYLING
   const firstGridStyle = {
-    backgroundColor: '#4c8bf5',
+    backgroundColor: '#80ACF8',
     borderRadius: '7px',
     padding: '20px',
   };
 
 
-
   const stockTitle = {
     textAlign: 'left',
     paddingBottom: '10px',
-    fontSize: '80px',
+    fontSize: '75px',
+  };
+
+  const stockBox = {
+    paddingBottom: '10px',
+    color: 'white',
   };
 
 
@@ -67,7 +71,7 @@ export default function AutocompleteExample() {
         <Grid item xs={12} style={firstGridStyle}>
 
             {/* <h1 style={{ margin: 0 }}>Track top tech stocks </h1> */}
-            <h2> NASDAQ, NYSE, AMEX, BATS </h2>
+            <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
 
             <Autocomplete  
               options={options}
@@ -86,8 +90,8 @@ export default function AutocompleteExample() {
                       className="company-logo" 
                       alt={`${option.value} logo`} 
                       src={option.logo} 
-                    />
-                    {option.label}
+                    /> 
+                    {' '+ option.label}
                   </Box>
                 );
               }}

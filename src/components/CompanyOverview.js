@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import { Grid } from "@mui/material";
+// import { Grid } from "@mui/material";
 
 
 function CompanyOverview({ selectedCompany }) {
@@ -61,7 +61,7 @@ function CompanyOverview({ selectedCompany }) {
     <>
 
 
-      <Grid container>
+      {/* <Grid container> */}
 
 
       {selectedCompany && <h2>{selectedCompany} Overview</h2>}
@@ -78,7 +78,7 @@ function CompanyOverview({ selectedCompany }) {
       <p>52-Wk Low: {fiftytwoWeekLow}</p>
 
 
-      </Grid>
+      {/* </Grid> */}
 
 
 

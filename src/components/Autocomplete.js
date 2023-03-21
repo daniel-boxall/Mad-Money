@@ -39,30 +39,25 @@ export default function AutocompleteExample() {
     boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
     position: "relative",
     marginBottom: 0,
+    margin: "5rem",
 
   };
+
   return (
     <>
-
-      <Grid container >
-
-      <Grid item xs={3} sm={3} md={5} sx={homepstyle}>
-
-
-
-
-      <h1>Track Top Tech Stocks </h1>
-
-      <Autocomplete
-        options={options}
-        getOptionLabel={(option) => option.label}
-        getOptionSelected={(option, value) => option.value === value.value}
-        disableClearable
-        fullWidth
-        onChange={handleChange}
-        renderOption={option => {
-          return (
-              <Box>
+      <Grid container sx={{ ...homepstyle, flexDirection: 'column' }}>
+        <Grid item xs={7} sx={homepstyle}>
+          <h1>Track Top Tech Stocks </h1>
+          <Autocomplete 
+            options={options}
+            getOptionLabel={(option) => option.label}
+            getOptionSelected={(option, value) => option.value === value.value}
+            disableClearable
+            fullWidth
+            onChange={handleChange}
+            renderOption={option => {
+              return (
+                <Box>
                   <img 
                     loading="lazy"
                     width="12"
@@ -71,42 +66,21 @@ export default function AutocompleteExample() {
                     alt={`${option.value} logo`} 
                     src={option.logo} 
                   />
-                    {option.label}
-              </Box>
-          );
-      }}
-        renderInput={(params) => (
-          <TextField {...params} label="Select an option" variant="outlined" />
-        )}
-      />
-
-
-
-
-
-
-
+                  {option.label}
+                </Box>
+              );
+            }}
+            renderInput={(params) => (
+              <TextField {...params} label="Select an option" variant="outlined" />
+            )}
+          />
+        </Grid>
+        <Grid item xs={12} sx={homepstyle}>
+          <CompanyOverview selectedCompany={selectedValue.value} />
+        </Grid>
       </Grid>
-
-
-
-
-
-
-
-
-
-
-      </Grid>
-
-
-
-      {/* {selectedValue && <p>You selected: {selectedValue.value}</p>} */}
-
-
-      <CompanyOverview selectedCompany={selectedValue.value} />
-      {/* <StockData selectedValue={selectedValue.value} /> */}
-      
     </>
   );
+  
+  
 };

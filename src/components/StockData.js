@@ -3,23 +3,33 @@ import axios from 'axios';
 // import LightweightChart from "./LightweightChart";
 import StockChart from "./StockChart";
 
-function StockData({ selectedValue }) {
+function StockData({ selectedCompany }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get('https://www.alphavantage.co/query', {
-        params: {
-          function: 'TIME_SERIES_MONTHLY',
-          symbol: selectedValue,
-          apikey: process.env.REACT_APP_API_KEY
-        }
-      });
-      // change state of data
-      setData(response.data);
-    }
-    fetchData();
-  }, [selectedValue]);
+    const fetchStockData = async () => {
+      // check and get cached data
+      const cachedData = localStorage.getItem(`stockData_${selectedCompany}`);
+      if (cachedData) {
+        // if there is cachedData, set the overview state to the cached data
+        setData(JSON.parse(cachedData));
+        return;
+      } else {
+        const response = await axios.get('https://www.alphavantage.co/query', {
+          params: {
+            function: 'TIME_SERIES_MONTHLY',
+            symbol: selectedCompany,
+            apikey: process.env.REACT_APP_STOCK_API_KEY2
+          }
+        });
+        // store the fetched data in localStorage
+        localStorage.setItem(`stockData_${selectedCompany}`, JSON.stringify(response.data));
+        // change state of data
+        setData(response.data);
+      }
+    };
+    fetchStockData();
+  }, [selectedCompany]);
   // dummy loading state
   if (!data) {
     return <div>Loading...</div>;

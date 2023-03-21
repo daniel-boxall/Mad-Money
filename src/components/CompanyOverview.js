@@ -20,7 +20,7 @@ function CompanyOverview({ selectedCompany }) {
             params: {
               function: 'OVERVIEW',
               symbol: selectedCompany,
-              apikey: process.env.REACT_APP_API_KEY
+              apikey: process.env.REACT_APP_STOCK_API_KEY1,
             }
           });
           // store the fetched data in localStorage

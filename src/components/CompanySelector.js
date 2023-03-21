@@ -3,10 +3,9 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
 import { Box } from '@material-ui/core';
 import StockData from './StockData.js';
-// import CompanyOverview from './CompanyOverview.js';
-// import StockData from './StockData.js';
+import CompanyOverview from './CompanyOverview.js';
 
-export default function AutocompleteExample() {
+export default function CompanySelector() {
   const options = [
     { value: 'AAPL', label: 'APPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
     { value: 'MSFT', label: 'MSFT - Microsoft Corp', logo: 'https://companiesmarketcap.com//img/company-logos/64/MSFT.webp' },
@@ -29,7 +28,7 @@ export default function AutocompleteExample() {
 
   return (
     <div>
-      <h1>Autocomplete Component</h1>
+      <h1>Company Selector</h1>
       <Autocomplete
         options={options}
         getOptionLabel={(option) => option.label}
@@ -53,11 +52,11 @@ export default function AutocompleteExample() {
           );
       }}
         renderInput={(params) => (
-          <TextField {...params} label="Select an option" variant="outlined" />
+          <TextField {...params} label="Select a company" variant="outlined" />
         )}
       />
       {selectedValue && <p>You selected: {selectedValue.value}</p>}
-      {/* <CompanyOverview selectedCompany={selectedValue.value} /> */}
+      <CompanyOverview selectedCompany={selectedValue.value} />
       <StockData selectedCompany={selectedValue.value} />
       
     </div>

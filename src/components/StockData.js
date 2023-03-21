@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-// import LightweightChart from "./LightweightChart";
 import StockChart from "./StockChart";
 
-function StockData({ selectedCompany }) {
-  const [data, setData] = useState(null);
+export default function StockData({ selectedCompany }) {
+  const [stockData, setStockData] = useState(null);
 
   useEffect(() => {
     const fetchStockData = async () => {
@@ -12,7 +11,7 @@ function StockData({ selectedCompany }) {
       const cachedData = localStorage.getItem(`stockData_${selectedCompany}`);
       if (cachedData) {
         // if there is cachedData, set the overview state to the cached data
-        setData(JSON.parse(cachedData));
+        setStockData(JSON.parse(cachedData));
         return;
       } else {
         const response = await axios.get('https://www.alphavantage.co/query', {
@@ -25,26 +24,26 @@ function StockData({ selectedCompany }) {
         // store the fetched data in localStorage
         localStorage.setItem(`stockData_${selectedCompany}`, JSON.stringify(response.data));
         // change state of data
-        setData(response.data);
+        setStockData(response.data);
       }
     };
     fetchStockData();
   }, [selectedCompany]);
+
   // dummy loading state
-  if (!data) {
+  if (!stockData) {
     return <div>Loading...</div>;
   }
-  // meta data of the stock data
-  // TODO: pass the meta data as chart legend
-  const metaData = data['Meta Data'];
+
+  // metadata of the stock data
+  // to be used as chart legend
+  const metaData = stockData['Meta Data'];
   const symbol = metaData['2. Symbol'];
   const lastRefreshed = metaData['3. Last Refreshed'];
   const timeZone = metaData['4. Time Zone'];
 
-  // monthly time series of the stock data
-  // TODO: pass the data to lightweight chart
-  const monthlyTimeSeries = data['Monthly Time Series'];
-  // console.log(monthlyTimeSeries);
+  // monthly time series of the stock data for the chart
+  const monthlyTimeSeries = stockData['Monthly Time Series'];
 
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
   return (
@@ -54,10 +53,7 @@ function StockData({ selectedCompany }) {
       <p>Last Refreshed: {lastRefreshed}</p>
       <p>Time Zone: {timeZone}</p>
       <p>{lastRefreshed}</p>
-      {/* <LightweightChart seriesData={monthlyTimeSeries} /> */}
       <StockChart seriesData={monthlyTimeSeries} />
     </div>
   );
 }
-
-export default StockData;

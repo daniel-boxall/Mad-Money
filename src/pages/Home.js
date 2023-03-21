@@ -1,5 +1,5 @@
 import React from 'react';
-import CompanySelector from '../components/CompanySelector.js';
+import CompanySelector from '../components/stocksApp/CompanySelector.js';
 import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
 

@@ -28,24 +28,24 @@ export default function CompanySelector() {
 
 
   // STYLING
-  const firstGridStyle = {
-    backgroundColor: '#92B8F9',
-    borderRadius: '7px',
-    padding: '20px',
+  // const firstGridStyle = {
+  //   backgroundColor: '#92B8F9',
+  //   borderRadius: '7px',
+  //   padding: '20px',
 
-  };
+  // };
 
 
-  const stockTitle = {
-    textAlign: 'left',
-    paddingBottom: '10px',
-    fontSize: '70px',
-  };
+  // const stockTitle = {
+  //   textAlign: 'left',
+  //   paddingBottom: '10px',
+  //   fontSize: '70px',
+  // };
 
-  const stockBox = {
-    paddingBottom: '15px',
-    color: 'white',
-  };
+  // const stockBox = {
+  //   paddingBottom: '15px',
+  //   color: 'white',
+  // };
 
   // const dropdownBox = {
   //   // border: '10px',

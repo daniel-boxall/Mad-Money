@@ -26,27 +26,27 @@ function Navbar() {
 
     return (
         <>
-          <nav className="navbar">
-              <div className="navbar-container">
-                  <Link to="/" className="navbar-logo">
+            <nav className="navbar">
+                <div className="navbar-container">
+                    <Link to="/" className="navbar-logo">
                       Mad Money
-                  </Link> 
-                  <div className='menu-icon' onClick={handleClick}>
-                      <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                  </div>
-                  <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                      <li className='nav-item'>
-                          <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    </Link> 
+                    <div className='menu-icon' onClick={handleClick}>
+                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                    </div>
+                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                        <li className='nav-item'>
+                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                               Stock
-                          </Link>
-                      </li>
-                      <li className='nav-item'>
-                          <Link to='Currency' className='nav-links' onClick={closeMobileMenu}>
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='Currency' className='nav-links' onClick={closeMobileMenu}>
                               Currency
-                          </Link>
-                      </li>
-                  </ul>
-                  <Link to='Team'><Button buttonStyle='btn--outline'>Meet The Team</Button></Link>
+                            </Link>
+                        </li>
+                    </ul>
+                    <Link to='Team'> {button &&<Button buttonStyle='btn--outline'>Meet The Team</Button>}</Link>
                 </div>
             </nav>
         </>

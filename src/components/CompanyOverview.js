@@ -59,6 +59,8 @@ function CompanyOverview({ selectedCompany }) {
   const description = overview['Description'];
   const sector = overview['Sector'];
 
+  
+
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>

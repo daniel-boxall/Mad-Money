@@ -34,6 +34,7 @@ export default function AutocompleteExample() {
     backgroundColor: '#92B8F9',
     borderRadius: '7px',
     padding: '20px',
+
   };
 
 

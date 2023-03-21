@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-// import { Grid } from "@mui/material";
+import { Grid, Paper, Typography } from '@mui/material';
+
+
 
 
 function CompanyOverview({ selectedCompany }) {
@@ -57,65 +59,31 @@ function CompanyOverview({ selectedCompany }) {
   const description = overview['Description'];
   const sector = overview['Sector'];
 
-  // return (
-  //   <>
-
-
-  //     {/* <Grid container> */}
-
-
-  //     {selectedCompany && <h2>{selectedCompany} Overview</h2>}
-  //     {/* <h2>{symbol}</h2> */}
-  //     {/* <p>Name: {name}</p> */}
-  //     <p>Description: {description}</p>
-  //     <p>Sector: {sector}</p>
-  //     <p>Exchange: {exchange}</p>
-  //     <p>Market Capitalization: {marketCap} {currency}</p>
-  //     <p>Gross Proft: {grossProfit} {currency}</p>
-  //     {/* <p>PERatio: {PERatio}</p> */}
-  //     <p>Currency: {currency}</p>
-  //     <p>52-Wk High: {fiftytwoWeekHigh}</p>
-  //     <p>52-Wk Low: {fiftytwoWeekLow}</p>
-
-
-  //     {/* </Grid> */}
-
-
-
-  //   </>
-
-  // );
-  
-
   return (
-    <>
-      {selectedCompany && <h2>{selectedCompany} Overview</h2>}
-      <table style={{borderSpacing: '10px'}}>
-        <tbody>
-          <p style={{padding: '10px'}} >Description: {description}</p>
-          <tr>
-            <td style={{padding: '10px'}}>Sector: {sector}</td>
-          </tr>
-          <tr>
-            <td style={{padding: '10px'}}>Exchange: {exchange}</td>
-            <td style={{padding: '10px'}}>Market Cap: {marketCap} {currency}</td>
-          </tr>
-          <tr>
-            <td style={{padding: '10px'}}>Gross Profit: {grossProfit} {currency}</td>
-            <td style={{padding: '10px'}}>Currency: {currency}</td>
-          </tr>
-          <tr>
-            <td style={{padding: '10px'}}>52-Wk High: {fiftytwoWeekHigh}</td>
-            <td style={{padding: '10px'}}>52-Wk Low: {fiftytwoWeekLow}</td>
-          </tr>
-        </tbody>
-      </table>
-    </>
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        {selectedCompany && <Typography variant="h5">{selectedCompany} Overview</Typography>}
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Paper sx={{ p: 2 }}>
+          <Typography variant="subtitle1">Description: {description} </Typography>
+          <Typography variant="subtitle1">Sector: {sector} </Typography>
+          <Typography variant="subtitle1">Exchange: {exchange}</Typography>
+          <Typography variant="subtitle1">Gross Profit: {grossProfit} {currency}</Typography>
+        </Paper>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Paper sx={{ p: 2 }}>
+          <Typography variant="subtitle1">Market Cap: {marketCap} {currency}</Typography>
+          <Typography variant="subtitle1">Currency: {currency} </Typography>
+          <Typography variant="subtitle1">52-Wk High: {fiftytwoWeekHigh} </Typography>
+          <Typography variant="subtitle1">52-Wk Low: {fiftytwoWeekLow}</Typography>
+        </Paper>
+      </Grid>
+    </Grid>
   );
   
-  
-  
-  
+
   
 }
 

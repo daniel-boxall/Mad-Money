@@ -32,12 +32,8 @@ function GithubProfile({ username }) {
       <img src={userData.avatar_url} alt='github avatar'></img>
       <h2>{userData.name}</h2>
       <div className='card-info'>
-        <p>Bio: <span>{userData.bio}</span></p>
-        <p>Location: <span>{userData.location}</span></p>
-        <p>Followers: <span>{userData.followers}</span></p>
-        <p>Following: <span>{userData.following}</span></p>
-        <p>Repos: <span>{userData.public_repos}</span></p>
-        <p>Account created: <span>{userData.created_at}</span></p>
+        <p>{userData.bio}</p>
+        <p>{userData.location}</p>
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ import Currency from './pages/Currency';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar.js';
+import Navbar from './components/globalUi/nav/Navbar.js';
 
 function App() {
   

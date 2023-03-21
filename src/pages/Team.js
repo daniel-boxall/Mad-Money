@@ -1,12 +1,12 @@
 import React from 'react';
-import GithubProfile from '../components/GithubProfile.js';
+import GithubProfile from '../components/aboutUs/GithubProfile.js';
 import './Team.css';
 import { Link } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import ButtonMailto from '../components/ButtonMailto';
+import ButtonMailto from '../components/globalUi/footer/ButtonMailto';
 
 function Team() {
     return (

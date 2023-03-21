@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Box } from '@material-ui/core';
+import { Box } from '@material-ui/core/Box';
 // import StockData from './StockData.js';
 import CompanyOverview from './CompanyOverview.js';
 // import StockData from './StockData.js';

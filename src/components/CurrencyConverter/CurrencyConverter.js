@@ -55,6 +55,9 @@ function CurrencyConverter() {
     padding: "4rem 2rem",
     boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
     position: "relative",
+    // marginTop: 0,
+    marginBottom: 0,
+
   };
 
   // Currency converter elements where user input is collected and if there is a value in firstAmount then it will render the result
@@ -62,10 +65,20 @@ function CurrencyConverter() {
   // Further down we have a second component that shows common denominations 
   return (
     <>
+
+<Grid container style={{ minHeight: "70vh" }}>
+
+
+
+
+
+    <Grid item xs={12} sm={12} md={12}>
+      
       <Container maxWidth="md" sx={boxStyles}>
         <Typography variant="h5" sx={{ marginBottom: "2rem" }}>
           Currency Converter
         </Typography>
+        
         <Grid container spacing={2}>
           <InputAmount />
           <SelectCountry
@@ -123,6 +136,19 @@ function CurrencyConverter() {
           1000 {fromCurrency} = {Number(resultCurrency * 1000).toFixed(2)} {toCurrency}
         </Typography>
       </Container>
+      
+    </Grid>
+
+
+
+    </Grid>
+
+
+
+
+
+
+
     </>
   );
 }

@@ -26,6 +26,34 @@ export default function CompanySelector() {
     setSelectedValue(newValue);
   };
 
+
+  // STYLING
+  const firstGridStyle = {
+    backgroundColor: '#92B8F9',
+    borderRadius: '7px',
+    padding: '20px',
+
+  };
+
+
+  const stockTitle = {
+    textAlign: 'left',
+    paddingBottom: '10px',
+    fontSize: '70px',
+  };
+
+  const stockBox = {
+    paddingBottom: '15px',
+    color: 'white',
+  };
+
+  // const dropdownBox = {
+  //   // border: '10px',
+  //   color: 'white !important',
+  // };
+
+
+
   return (
     <div>
       <h1>Company Selector</h1>
@@ -61,4 +89,9 @@ export default function CompanySelector() {
       
     </div>
   );
+  
+  
+  
+  
+  
 };

@@ -6,6 +6,7 @@ import { Box, Grid } from '@material-ui/core';
 import CompanyOverview from './CompanyOverview.js';
 // import StockData from './StockData.js';
 
+
 export default function AutocompleteExample() {
   const options = [
     { value: 'AAPL', label: 'APPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
@@ -27,9 +28,26 @@ export default function AutocompleteExample() {
     setSelectedValue(newValue);
   };
 
+ 
+  // STYLING
+  const firstGridStyle = {
+    backgroundColor: '#4c8bf5',
+    borderRadius: '7px',
+    padding: '20px',
+  };
+
+
+
+  const stockTitle = {
+    textAlign: 'left',
+    paddingBottom: '10px',
+    fontSize: '80px',
+  };
+
 
 
   return (
+    
     <div style={{
       position: 'fixed',
       top: 0,
@@ -41,12 +59,17 @@ export default function AutocompleteExample() {
       alignItems: 'center'
     }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        < Grid container spacing={2}>
-          <Grid item xs={12}>
-            <h1 style={{ margin: 0 }}>Track top tech stocks </h1>
+      <h1 style={stockTitle}>Track top tech stocks </h1>
+
+
+        <Grid container spacing={2}>
+
+        <Grid item xs={12} style={firstGridStyle}>
+
+            {/* <h1 style={{ margin: 0 }}>Track top tech stocks </h1> */}
             <h2> NASDAQ, NYSE, AMEX, BATS </h2>
 
-            <Autocomplete 
+            <Autocomplete  
               options={options}
               getOptionLabel={(option) => option.label}
               getOptionSelected={(option, value) => option.value === value.value}
@@ -72,12 +95,13 @@ export default function AutocompleteExample() {
                 <TextField {...params} label="Select an option" variant="outlined" />
               )}
             />
-            </Grid>
+        </Grid>
 
-          <Grid item xs={12}>
+
+        <Grid item xs={12}>
 
             <CompanyOverview selectedCompany={selectedValue.value} />
-          </Grid>
+        </Grid>
           
 
         </Grid>

@@ -31,7 +31,7 @@ export default function AutocompleteExample() {
  
   // STYLING
   const firstGridStyle = {
-    backgroundColor: '#80ACF8',
+    backgroundColor: '#92B8F9',
     borderRadius: '7px',
     padding: '20px',
   };
@@ -40,13 +40,18 @@ export default function AutocompleteExample() {
   const stockTitle = {
     textAlign: 'left',
     paddingBottom: '10px',
-    fontSize: '75px',
+    fontSize: '70px',
   };
 
   const stockBox = {
-    paddingBottom: '10px',
+    paddingBottom: '15px',
     color: 'white',
   };
+
+  // const dropdownBox = {
+  //   // border: '10px',
+  //   color: 'white !important',
+  // };
 
 
 
@@ -63,7 +68,7 @@ export default function AutocompleteExample() {
       alignItems: 'center'
     }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1 style={stockTitle}>Track top tech stocks </h1>
+      <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
 
 
         <Grid container spacing={2}>
@@ -82,7 +87,8 @@ export default function AutocompleteExample() {
               onChange={handleChange}
               renderOption={option => {
                 return (
-                  <Box>
+                  
+                  <Box >
                     <img 
                       loading="lazy"
                       width="12"
@@ -96,7 +102,17 @@ export default function AutocompleteExample() {
                 );
               }}
               renderInput={(params) => (
-                <TextField {...params} label="Select an option" variant="outlined" />
+                <TextField {...params}
+                label="Select a stock" 
+                variant="outlined" 
+                // InputProps={{
+                //   style: dropdownBox,
+                //   placeholder: 'Select a stock',
+                //   readOnly: false,
+
+                // }}
+
+                />
               )}
             />
         </Grid>

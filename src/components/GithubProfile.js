@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+
 function GithubProfile({ username }) {
   const [userData, setUserData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -28,15 +29,16 @@ function GithubProfile({ username }) {
 
   return (
     <div>
-      <h1>Github User API</h1>
-      <h2>{userData.name}</h2>
       <img src={userData.avatar_url} alt='github avatar'></img>
-      <p>Bio: {userData.bio}</p>
-      <p>Location: {userData.location}</p>
-      <p>Followers: {userData.followers}</p>
-      <p>Following: {userData.following}</p>
-      <p>Account created at: {userData.created_at}</p>
-      <a href={userData.html_url}>Github page link.</a>
+      <h2>{userData.name}</h2>
+      <div className='card-info'>
+        <p>Bio: <span>{userData.bio}</span></p>
+        <p>Location: <span>{userData.location}</span></p>
+        <p>Followers: <span>{userData.followers}</span></p>
+        <p>Following: <span>{userData.following}</span></p>
+        <p>Repos: <span>{userData.public_repos}</span></p>
+        <p>Account created: <span>{userData.created_at}</span></p>
+      </div>
     </div>
   )
 }

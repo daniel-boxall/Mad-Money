@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.body {
+    min-height: 90vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+.title {
+    color: #426696;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 2.5rem;
+    color: #426696;
+    font-weight: 550;
+    text-align: center;
+}
+
+.card-info p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card-info span {
+    font-weight: 300;
+}
+.card-info {
+    display: block;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin-left: 1rem;
+}
+
+.card {
+    display: block;
+    background: linear-gradient(to left top,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5));
+    border-radius: 1rem;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    justify-content: space-between;
+}
+
+.card img {
+    display: block;
+    flex: 1;
+    width: 10rem;
+    border-radius: 10px;
+    margin: auto;
+}
+.main {
+    font-family: "poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info a {
+    text-decoration: none;
+    color: #426696;
+
+}
+
+
+
+

@@ -5,7 +5,7 @@ function CompanyOverview({ selectedCompany }) {
   const [overview, setOverview] = useState({});
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCompanyOverview = async () => {
       // check and get cached data
       const cachedData = localStorage.getItem(`overview_${selectedCompany}`);
 
@@ -14,21 +14,26 @@ function CompanyOverview({ selectedCompany }) {
         setOverview(JSON.parse(cachedData));
         return;
       } else {
-        // if there is no cached data, fetch the data from the API
-        const response = await axios.get('https://www.alphavantage.co/query', {
-          params: {
-            function: 'OVERVIEW',
-            symbol: selectedCompany,
-            apikey: process.env.REACT_APP_API_KEY
-          }
-        });
-        // store the fetched data in localStorage
-        localStorage.setItem(`overview_${selectedCompany}`, JSON.stringify(response.data));
-        // set the overview state to the fetched data
-        setOverview(response.data);
+        try {
+          // if there is no cached data, fetch the data from the API
+          const response = await axios.get('https://www.alphavantage.co/query', {
+            params: {
+              function: 'OVERVIEW',
+              symbol: selectedCompany,
+              apikey: process.env.REACT_APP_API_KEY
+            }
+          });
+          // store the fetched data in localStorage
+          localStorage.setItem(`overview_${selectedCompany}`, JSON.stringify(response.data));
+          // set the overview state to the fetched data
+          setOverview(response.data);
+        } catch (error) {
+          // catch any api call errors
+          console.error('Error fetching company overview:', error);
+        }
       }
     };
-    fetchData();
+    fetchCompanyOverview();
   }, [selectedCompany]);
   // dummy loading state
   if (!overview) {

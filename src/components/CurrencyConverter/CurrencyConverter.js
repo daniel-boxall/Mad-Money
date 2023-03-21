@@ -8,6 +8,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Box } from "@mui/system";
 
+
 function CurrencyConverter() {
   const {
     fromCurrency,
@@ -15,7 +16,7 @@ function CurrencyConverter() {
     toCurrency,
     setToCurrency,
     firstAmount,
-    setFirstAmount,
+  
   } = useContext(CurrencyContext);
   const [resultCurrency, setResultCurrency] = useState(0);
   const codeFromCurrency = fromCurrency.split(" ")[1];
@@ -36,7 +37,7 @@ function CurrencyConverter() {
         )
         .catch((error) => console.log(error));
     }
-  }, [firstAmount, fromCurrency, toCurrency]);
+  }, [firstAmount, fromCurrency, toCurrency, codeFromCurrency, codeToCurrency]);
 
   const boxStyles = {
     background: "#fdfdfd",
@@ -89,28 +90,28 @@ function CurrencyConverter() {
       </Container>
       <Container maxWidth="md" sx={boxStyles} style={{ textAlign: "left" }}>
         <Typography>
-          1 {toCurrency} = {resultCurrency} {fromCurrency}
+          1 {fromCurrency} = {resultCurrency} {toCurrency}
         </Typography>
         <Typography>
-          5 {toCurrency} = {resultCurrency * 5} {fromCurrency}
+          5 {fromCurrency} = {resultCurrency * 5} {toCurrency}
         </Typography>
         <Typography>
-          10 {toCurrency} = {resultCurrency * 10} {fromCurrency}
+          10 {fromCurrency} = {resultCurrency * 10} {toCurrency}
         </Typography>
         <Typography>
-          25 {toCurrency} = {resultCurrency * 25} {fromCurrency}
+          25 {fromCurrency} = {resultCurrency * 25} {toCurrency}
         </Typography>
         <Typography>
-          50 {toCurrency} = {resultCurrency * 50} {fromCurrency}
+          50 {fromCurrency} = {resultCurrency * 50} {toCurrency}
         </Typography>
         <Typography>
-          100 {toCurrency} = {resultCurrency * 100} {fromCurrency}
+          100 {fromCurrency} = {resultCurrency * 100} {toCurrency}
         </Typography>
         <Typography>
-          500 {toCurrency} = {resultCurrency * 500} {fromCurrency}
+          500 {fromCurrency} = {resultCurrency * 500} {toCurrency}
         </Typography>
         <Typography>
-          1000 {toCurrency} = {resultCurrency * 1000} {fromCurrency}
+          1000 {fromCurrency} = {resultCurrency * 1000} {toCurrency}
         </Typography>
       </Container>
     </>

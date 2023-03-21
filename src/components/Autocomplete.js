@@ -28,59 +28,61 @@ export default function AutocompleteExample() {
   };
 
 
-  const homepstyle = {
-    background: "#0000FF",
-    marginTop: "10rem",
-    textAlign: "center",
-    color: "#222",
-    minHeight: "20rem",
-    borderRadius: 2,
-    padding: "4rem 2rem",
-    boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
-    position: "relative",
-    marginBottom: 0,
-    margin: "5rem",
-
-  };
 
   return (
-    <>
-      <Grid container sx={{ ...homepstyle, flexDirection: 'column' }}>
-        <Grid item xs={7} sx={homepstyle}>
-          <h1>Track Top Tech Stocks </h1>
-          <Autocomplete 
-            options={options}
-            getOptionLabel={(option) => option.label}
-            getOptionSelected={(option, value) => option.value === value.value}
-            disableClearable
-            fullWidth
-            onChange={handleChange}
-            renderOption={option => {
-              return (
-                <Box>
-                  <img 
-                    loading="lazy"
-                    width="12"
-                    height="12" 
-                    className="company-logo" 
-                    alt={`${option.value} logo`} 
-                    src={option.logo} 
-                  />
-                  {option.label}
-                </Box>
-              );
-            }}
-            renderInput={(params) => (
-              <TextField {...params} label="Select an option" variant="outlined" />
-            )}
-          />
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <h1 style={{ margin: 0 }}>Track Top Tech Stocks </h1>
+          </Grid>
+          <Grid item xs={12}>
+            <Autocomplete 
+              options={options}
+              getOptionLabel={(option) => option.label}
+              getOptionSelected={(option, value) => option.value === value.value}
+              disableClearable
+              fullWidth
+              onChange={handleChange}
+              renderOption={option => {
+                return (
+                  <Box>
+                    <img 
+                      loading="lazy"
+                      width="12"
+                      height="12" 
+                      className="company-logo" 
+                      alt={`${option.value} logo`} 
+                      src={option.logo} 
+                    />
+                    {option.label}
+                  </Box>
+                );
+              }}
+              renderInput={(params) => (
+                <TextField {...params} label="Select an option" variant="outlined" />
+              )}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <CompanyOverview selectedCompany={selectedValue.value} />
+          </Grid>
         </Grid>
-        <Grid item xs={12} sx={homepstyle}>
-          <CompanyOverview selectedCompany={selectedValue.value} />
-        </Grid>
-      </Grid>
-    </>
+      </div>
+    </div>
   );
+  
+  
+  
   
   
 };

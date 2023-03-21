@@ -26,7 +26,7 @@ export default function CompanySelector() {
     setSelectedValue(newValue);
   };
 
- 
+
   // STYLING
   const firstGridStyle = {
     backgroundColor: '#92B8F9',

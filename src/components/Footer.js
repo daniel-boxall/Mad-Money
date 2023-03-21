@@ -11,7 +11,7 @@ function Footer() {
     return (
         <div className='footer-container'>
             <div className='footer-link-wrapper'>
-                <h2 className='footer-title'>Contact Us</h2>
+                {/* <h2 className='footer-title'>Contact Us</h2> */}
                 <div className='row'>
                     <div className='column'>
                         <h2 className='name'>David Jones</h2>
@@ -43,7 +43,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <small className='website-rights'>Mad Money © 2023</small>
+            {/* <small className='website-rights'>Mad Money © 2023</small> */}
         </div>
     );
 }

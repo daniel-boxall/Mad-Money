@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './components/Footer.js'
+// import Footer from './components/Footer.js'
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Currency from './pages/Currency';
@@ -21,7 +21,7 @@ function App() {
               <Route path='Currency' element={<Currency />} />
           </Routes>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>  
     </div>
   );

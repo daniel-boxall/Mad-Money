@@ -42,7 +42,7 @@ function CurrencyConverter() {
         )
         .catch((error) => console.log(error));
     }
-  }, [firstAmount, fromCurrency, toCurrency, codeFromCurrency, codeToCurrency]);
+  }, [firstAmount, fromCurrency, toCurrency, codeFromCurrency, codeToCurrency, resultCurrency]);
 
   // CSS styles for both boxes
   const boxStyles = {

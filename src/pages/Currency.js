@@ -11,8 +11,7 @@ function Currency() {
                 <CurrencyProvider>
                     <CurrencyConverter />
                 </CurrencyProvider>
-            </div>
-            
+            </div>  
         </>
     );
 }

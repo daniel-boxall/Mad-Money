@@ -4,11 +4,9 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Currency from './pages/Currency';
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
-
-
-
 
 function App() {
   

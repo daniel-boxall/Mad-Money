@@ -47,13 +47,17 @@
 
 .column h2 {
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 .column a {
     margin-bottom: 10px;
     text-decoration: none;
     color: var(--primary);
+}
+
+.column a:hover {
+    transition: scale(2.5);
 }
 
 .website-rights {

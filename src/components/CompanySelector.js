@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Box, Grid } from '@material-ui/core';
-// import StockData from './StockData.js';
+import { Box } from '@material-ui/core';
+import StockData from './StockData.js';
 import CompanyOverview from './CompanyOverview.js';
-// import StockData from './StockData.js';
 
-
-export default function AutocompleteExample() {
+export default function CompanySelector() {
   const options = [
     { value: 'AAPL', label: 'APPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
     { value: 'MSFT', label: 'MSFT - Microsoft Corp', logo: 'https://companiesmarketcap.com//img/company-logos/64/MSFT.webp' },
@@ -57,77 +55,38 @@ export default function AutocompleteExample() {
 
 
   return (
-    
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center'
-    }}>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
-
-
-        <Grid container spacing={2}>
-
-        <Grid item xs={12} style={firstGridStyle}>
-
-            {/* <h1 style={{ margin: 0 }}>Track top tech stocks </h1> */}
-            <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
-
-            <Autocomplete  
-              options={options}
-              getOptionLabel={(option) => option.label}
-              getOptionSelected={(option, value) => option.value === value.value}
-              disableClearable
-              fullWidth
-              onChange={handleChange}
-              renderOption={option => {
-                return (
-                  
-                  <Box >
-                    <img 
-                      loading="lazy"
-                      width="12"
-                      height="12" 
-                      className="company-logo" 
-                      alt={`${option.value} logo`} 
-                      src={option.logo} 
-                    /> 
-                    {' '+ option.label}
-                  </Box>
-                );
-              }}
-              renderInput={(params) => (
-                <TextField {...params}
-                label="Select a stock" 
-                variant="outlined" 
-                // InputProps={{
-                //   style: dropdownBox,
-                //   placeholder: 'Select a stock',
-                //   readOnly: false,
-
-                // }}
-
-                />
-              )}
-            />
-        </Grid>
-
-
-        <Grid item xs={12}>
-
-            <CompanyOverview selectedCompany={selectedValue.value} />
-        </Grid>
-          
-
-        </Grid>
-
-      </div>
+    <div>
+      <h1>Company Selector</h1>
+      <Autocomplete
+        options={options}
+        getOptionLabel={(option) => option.label}
+        getOptionSelected={(option, value) => option.value === value.value}
+        disableClearable
+        fullWidth
+        onChange={handleChange}
+        renderOption={option => {
+          return (
+              <Box>
+                  <img 
+                    loading="lazy"
+                    width="12"
+                    height="12" 
+                    className="company-logo" 
+                    alt={`${option.value} logo`} 
+                    src={option.logo} 
+                  />
+                    {option.label}
+              </Box>
+          );
+      }}
+        renderInput={(params) => (
+          <TextField {...params} label="Select a company" variant="outlined" />
+        )}
+      />
+      {selectedValue && <p>You selected: {selectedValue.value}</p>}
+      <CompanyOverview selectedCompany={selectedValue.value} />
+      <StockData selectedCompany={selectedValue.value} />
+      
     </div>
   );
   

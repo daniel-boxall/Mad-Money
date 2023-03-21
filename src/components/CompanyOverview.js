@@ -9,18 +9,35 @@ function CompanyOverview({ selectedCompany }) {
   const [overview, setOverview] = useState({});
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get('https://www.alphavantage.co/query', {
-        params: {
-          function: 'OVERVIEW',
-          symbol: selectedCompany,
-          apikey: process.env.REACT_APP_API_KEY
+    const fetchCompanyOverview = async () => {
+      // check and get cached data
+      const cachedData = localStorage.getItem(`overview_${selectedCompany}`);
+
+      if (cachedData) {
+        // if there is cachedData, set the overview state to the cached data
+        setOverview(JSON.parse(cachedData));
+        return;
+      } else {
+        try {
+          // if there is no cached data, fetch the data from the API
+          const response = await axios.get('https://www.alphavantage.co/query', {
+            params: {
+              function: 'OVERVIEW',
+              symbol: selectedCompany,
+              apikey: process.env.REACT_APP_STOCK_API_KEY1,
+            }
+          });
+          // store the fetched data in localStorage
+          localStorage.setItem(`overview_${selectedCompany}`, JSON.stringify(response.data));
+          // set the overview state to the fetched data
+          setOverview(response.data);
+        } catch (error) {
+          // catch any api call errors
+          console.error('Error fetching company overview:', error);
         }
-      });
-      // change state of overview
-      setOverview(response.data);
-    }
-    fetchData();
+      }
+    };
+    fetchCompanyOverview();
   }, [selectedCompany]);
   // dummy loading state
   if (!overview) {

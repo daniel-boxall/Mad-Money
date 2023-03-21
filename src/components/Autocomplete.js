@@ -41,11 +41,11 @@ export default function AutocompleteExample() {
       alignItems: 'center'
     }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <Grid container spacing={2}>
+        < Grid container spacing={2}>
           <Grid item xs={12}>
-            <h1 style={{ margin: 0 }}>Track Top Tech Stocks </h1>
-          </Grid>
-          <Grid item xs={12}>
+            <h1 style={{ margin: 0 }}>Track top tech stocks </h1>
+            <h2> NASDAQ, NYSE, AMEX, BATS </h2>
+
             <Autocomplete 
               options={options}
               getOptionLabel={(option) => option.label}
@@ -72,11 +72,16 @@ export default function AutocompleteExample() {
                 <TextField {...params} label="Select an option" variant="outlined" />
               )}
             />
-          </Grid>
+            </Grid>
+
           <Grid item xs={12}>
+
             <CompanyOverview selectedCompany={selectedValue.value} />
           </Grid>
+          
+
         </Grid>
+
       </div>
     </div>
   );

@@ -57,34 +57,66 @@ function CompanyOverview({ selectedCompany }) {
   const description = overview['Description'];
   const sector = overview['Sector'];
 
+  // return (
+  //   <>
+
+
+  //     {/* <Grid container> */}
+
+
+  //     {selectedCompany && <h2>{selectedCompany} Overview</h2>}
+  //     {/* <h2>{symbol}</h2> */}
+  //     {/* <p>Name: {name}</p> */}
+  //     <p>Description: {description}</p>
+  //     <p>Sector: {sector}</p>
+  //     <p>Exchange: {exchange}</p>
+  //     <p>Market Capitalization: {marketCap} {currency}</p>
+  //     <p>Gross Proft: {grossProfit} {currency}</p>
+  //     {/* <p>PERatio: {PERatio}</p> */}
+  //     <p>Currency: {currency}</p>
+  //     <p>52-Wk High: {fiftytwoWeekHigh}</p>
+  //     <p>52-Wk Low: {fiftytwoWeekLow}</p>
+
+
+  //     {/* </Grid> */}
+
+
+
+  //   </>
+
+  // );
+  
+
   return (
     <>
-
-
-      {/* <Grid container> */}
-
-
       {selectedCompany && <h2>{selectedCompany} Overview</h2>}
-      {/* <h2>{symbol}</h2> */}
-      {/* <p>Name: {name}</p> */}
-      <p>Description: {description}</p>
-      <p>Sector: {sector}</p>
-      <p>Exchange: {exchange}</p>
-      <p>Market Capitalization: {marketCap} {currency}</p>
-      <p>Gross Proft: {grossProfit} {currency}</p>
-      {/* <p>PERatio: {PERatio}</p> */}
-      <p>Currency: {currency}</p>
-      <p>52-Wk High: {fiftytwoWeekHigh}</p>
-      <p>52-Wk Low: {fiftytwoWeekLow}</p>
-
-
-      {/* </Grid> */}
-
-
-
+      <table style={{borderSpacing: '10px'}}>
+        <tbody>
+          <p style={{padding: '10px'}} >Description: {description}</p>
+          <tr>
+            <td style={{padding: '10px'}}>Sector: {sector}</td>
+          </tr>
+          <tr>
+            <td style={{padding: '10px'}}>Exchange: {exchange}</td>
+            <td style={{padding: '10px'}}>Market Cap: {marketCap} {currency}</td>
+          </tr>
+          <tr>
+            <td style={{padding: '10px'}}>Gross Profit: {grossProfit} {currency}</td>
+            <td style={{padding: '10px'}}>Currency: {currency}</td>
+          </tr>
+          <tr>
+            <td style={{padding: '10px'}}>52-Wk High: {fiftytwoWeekHigh}</td>
+            <td style={{padding: '10px'}}>52-Wk Low: {fiftytwoWeekLow}</td>
+          </tr>
+        </tbody>
+      </table>
     </>
-
   );
+  
+  
+  
+  
+  
 }
 
 export default CompanyOverview;

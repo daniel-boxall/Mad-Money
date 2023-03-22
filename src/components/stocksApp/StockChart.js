@@ -49,7 +49,6 @@ class StockChart extends React.Component {
   render() {
     return (
       <div>
-        {/* <h1>StockChart</h1> */}
         <div id="chart" style={{"margin-bottom":"50px"}} />
       </div>
     );

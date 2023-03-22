@@ -16,7 +16,7 @@ export default function StockData({ selectedCompany }) {
       } else {
         const response = await axios.get('https://www.alphavantage.co/query', {
           params: {
-            function: 'TIME_SERIES_MONTHLY',
+            function: 'TIME_SERIES_DAILY_ADJUSTED',
             symbol: selectedCompany,
             apikey: process.env.REACT_APP_STOCK_API_KEY2
           }
@@ -40,10 +40,10 @@ export default function StockData({ selectedCompany }) {
   const metaData = stockData['Meta Data'];
   const symbol = metaData['2. Symbol'];
   const lastRefreshed = metaData['3. Last Refreshed'];
-  const timeZone = metaData['4. Time Zone'];
+  const timeZone = metaData['5. Time Zone'];
 
   // monthly time series of the stock data for the chart
-  const monthlyTimeSeries = stockData['Monthly Time Series'];
+  const monthlyTimeSeries = stockData['Time Series (Daily)'];
 
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
   return (

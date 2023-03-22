@@ -50,7 +50,7 @@ export default function StockData({ selectedCompany }) {
 // Styling
 const chartStyle = {
   fontSize: '25px',
-  padding: '15px',
+  padding: '12px',
   paddingLeft: '0',
 };
 

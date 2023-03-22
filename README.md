@@ -35,7 +35,7 @@ This project is licensed under The MIT License
 N/A
 ## Questions
 If you have any questions feel free to contact us.
-[DJ-86](mailto:davidmarkjones86@gmail.com)
-[dearbojack](mailto:dali4han@gmail.com)
-[daniel-boxall](mailto:danielboxall07@gmail.com)
-[shah-hoque](mailto:shah.hoque@hotmail.co.uk)
+ - [DJ-86](mailto:davidmarkjones86@gmail.com)
+ - [dearbojack](mailto:dali4han@gmail.com)
+ - [daniel-boxall](mailto:danielboxall07@gmail.com)
+ - [shah-hoque](mailto:shah.hoque@hotmail.co.uk)

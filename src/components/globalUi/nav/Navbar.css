@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 .navbar {
     background: white;
     height: 80px;
@@ -22,8 +24,10 @@
 
 .navbar-logo {
     color: #010101;
-    justify-self: start;
-    margin-left: 2rem;
+    /* justify-self: start; */
+    /* margin-left: 20px; */
+    font-family: "Lobster", cursive;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;

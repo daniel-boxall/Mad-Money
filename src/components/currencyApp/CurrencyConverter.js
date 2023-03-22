@@ -18,8 +18,10 @@ function CurrencyConverter() {
     firstAmount,
   } = useContext(CurrencyContext);
 
-  const fromCountryCode = fromCurrency.split(" ")[0];
-  const toCountryCode = toCurrency.split(" ")[0];
+  const fromCountryCode = fromCurrency.split(" ")[1];
+  const toCountryCode = toCurrency.split(" ")[1];
+  const fromCountryFlag = toCurrency.split(" ")[0];
+  const toCountryFlag = toCurrency.split(" ")[0];
 
   // default state of resultCurrency
   const [resultCurrency, setResultCurrency] = useState(0);
@@ -131,7 +133,7 @@ function CurrencyConverter() {
             sx={{ display: "flex", justifyContent: "center", margin: "auto" }}
           >
             <Container maxWidth="md" sx={boxStyles} style={results}>
-              <Typography variant="h5">{fromCountryCode} - {toCountryCode}</Typography>
+              <Typography variant="h5" sx={{fontSize: '4rem'}}>{fromCountryFlag} - {toCountryFlag}</Typography>
               <Typography>1 {fromCountryCode} = {Number(resultCurrency * 1).toFixed(2)} {toCountryCode}</Typography>
               <Typography>5 {fromCountryCode} = {Number(resultCurrency * 5).toFixed(2)} {toCountryCode}</Typography>
               <Typography>10 {fromCountryCode} = {Number(resultCurrency * 10).toFixed(2)} {toCountryCode}</Typography>

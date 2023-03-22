@@ -76,13 +76,13 @@ function CurrencyConverter() {
 
   const boxStyles = {
     background: "#fdfdfd",
-    marginTop: "5rem",
+    marginTop: "2rem",
     textAlign: "center",
     color: "#222",
-    minHeight: "20rem",
+    minHeight: "12rem",
     borderRadius: 2,
-    padding: "4rem 2rem",
-    boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
+    padding: "2rem 2rem",
+    boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.7)",
     position: "relative",
     // marginTop: 0,
     marginBottom: "20px"
@@ -94,9 +94,9 @@ function CurrencyConverter() {
   // Further down we have a second component that shows common denominations
   return (
     <>
-      <Grid container style={{ minHeight: "70vh" }}>
+      <Grid container>
         <Grid item xs={12} sm={12} md={12}>
-          <Container maxWidth="md" sx={boxStyles}>
+          <Container className='card' maxWidth="md" sx={boxStyles}>
             <Typography variant="h5" sx={{ marginBottom: "1rem" }}>
               Currency Converter
             </Typography>
@@ -117,7 +117,7 @@ function CurrencyConverter() {
             </Grid>
 
             {firstAmount ? (
-              <Box sx={{ textAlign: "left", marginTop: "1rem" }}>
+              <Box className="result1" sx={{ textAlign: "center", marginTop: "1rem" }}>
                 <Typography>
                   {firstAmount} {fromCurrency} =
                 </Typography>
@@ -135,7 +135,7 @@ function CurrencyConverter() {
           <Grid
             sx={{ display: "flex", justifyContent: "center", margin: "auto" }}
           >
-            <Container maxWidth="md" sx={boxStyles} style={results}>
+            <Container className="card1" maxWidth="md" sx={boxStyles} style={results}>
               <Typography variant="h5" sx={{ fontSize: "4rem" }}>
                 {fromCountryFlag} - {toCountryFlag}
               </Typography>

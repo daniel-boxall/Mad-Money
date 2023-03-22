@@ -64,6 +64,9 @@ function CurrencyConverter() {
     updateResultCurrency();
   }, [firstAmount, codeFromCurrency, codeToCurrency]);
 
+
+
+  // CSS styles for both boxes
   const results = {
     display: "flex",
     flexDirection: "column",
@@ -71,7 +74,6 @@ function CurrencyConverter() {
     margin: "1rem",
   };
 
-  // CSS styles for both boxes
   const boxStyles = {
     background: "#fdfdfd",
     marginTop: "10rem",

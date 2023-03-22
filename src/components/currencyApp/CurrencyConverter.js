@@ -20,7 +20,7 @@ function CurrencyConverter() {
 
   const fromCountryCode = fromCurrency.split(" ")[1];
   const toCountryCode = toCurrency.split(" ")[1];
-  const fromCountryFlag = toCurrency.split(" ")[0];
+  const fromCountryFlag = fromCurrency.split(" ")[0];
   const toCountryFlag = toCurrency.split(" ")[0];
 
   // default state of resultCurrency
@@ -65,17 +65,18 @@ function CurrencyConverter() {
   }, [firstAmount, codeFromCurrency, codeToCurrency]);
 
 
+
+  // CSS styles for both boxes
   const results = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    margin: '1rem'
+    margin: "1rem",
   };
- 
-  // CSS styles for both boxes
+
   const boxStyles = {
     background: "#fdfdfd",
-    marginTop: "10rem",
+    marginTop: "5rem",
     textAlign: "center",
     color: "#222",
     minHeight: "20rem",
@@ -94,7 +95,7 @@ function CurrencyConverter() {
       <Grid container style={{ minHeight: "70vh" }}>
         <Grid item xs={12} sm={12} md={12}>
           <Container maxWidth="md" sx={boxStyles}>
-            <Typography variant="h5" sx={{ marginBottom: "2rem" }}>
+            <Typography variant="h5" sx={{ marginBottom: "1rem" }}>
               Currency Converter
             </Typography>
 
@@ -133,16 +134,42 @@ function CurrencyConverter() {
             sx={{ display: "flex", justifyContent: "center", margin: "auto" }}
           >
             <Container maxWidth="md" sx={boxStyles} style={results}>
-              <Typography variant="h5" sx={{fontSize: '4rem'}}>{fromCountryFlag} - {toCountryFlag}</Typography>
-              <Typography>1 {fromCountryCode} = {Number(resultCurrency * 1).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>5 {fromCountryCode} = {Number(resultCurrency * 5).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>10 {fromCountryCode} = {Number(resultCurrency * 10).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>20 {fromCountryCode} = {Number(resultCurrency * 20).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>50 {fromCountryCode} = {Number(resultCurrency * 50).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>100 {fromCountryCode} = {Number(resultCurrency * 100).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>500 {fromCountryCode} = {Number(resultCurrency * 500).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>1000 {fromCountryCode} = {Number(resultCurrency * 1000).toFixed(2)} {toCountryCode}</Typography>
-              </Container>
+              <Typography variant="h5" sx={{ fontSize: "4rem" }}>
+                {fromCountryFlag} - {toCountryFlag}
+              </Typography>
+              <Typography>
+                1 {fromCountryCode} = {Number(resultCurrency * 1).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                5 {fromCountryCode} = {Number(resultCurrency * 5).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                10 {fromCountryCode} = {Number(resultCurrency * 10).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                20 {fromCountryCode} = {Number(resultCurrency * 20).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                50 {fromCountryCode} = {Number(resultCurrency * 50).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                100 {fromCountryCode} ={" "}
+                {Number(resultCurrency * 100).toFixed(2)} {toCountryCode}
+              </Typography>
+              <Typography>
+                500 {fromCountryCode} ={" "}
+                {Number(resultCurrency * 500).toFixed(2)} {toCountryCode}
+              </Typography>
+              <Typography>
+                1000 {fromCountryCode} ={" "}
+                {Number(resultCurrency * 1000).toFixed(2)} {toCountryCode}
+              </Typography>
+            </Container>
           </Grid>
         </Grid>
       </Grid>

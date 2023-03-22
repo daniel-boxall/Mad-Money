@@ -76,7 +76,7 @@ function CurrencyConverter() {
 
   const boxStyles = {
     background: "#fdfdfd",
-    marginTop: "10rem",
+    marginTop: "5rem",
     textAlign: "center",
     color: "#222",
     minHeight: "20rem",
@@ -95,7 +95,7 @@ function CurrencyConverter() {
       <Grid container style={{ minHeight: "70vh" }}>
         <Grid item xs={12} sm={12} md={12}>
           <Container maxWidth="md" sx={boxStyles}>
-            <Typography variant="h5" sx={{ marginBottom: "2rem" }}>
+            <Typography variant="h5" sx={{ marginBottom: "1rem" }}>
               Currency Converter
             </Typography>
 

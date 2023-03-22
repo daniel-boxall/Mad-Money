@@ -6,7 +6,7 @@ import Footer from '../components/globalUi/footer/Footer'
 function Team() {
     return (
         <>
-            <div className='about' style={{"min-height":"calc(100vh - 230px)"}}>
+            <div className='about' style={{"minHeight":"calc(100vh - 230px)"}}>
                 <h1 className='title'>Meet The Team</h1>
                 <GithubProfile username={'dearbojack'} />
                 <GithubProfile username={'daniel-boxall'} />

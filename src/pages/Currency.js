@@ -7,7 +7,7 @@ import Footer from '../components/globalUi/footer/Footer'
 function Currency() {
     return (
         <>
-            <div style={{ "min-height":"calc(100vh - 213px" }}>
+            <div style={{ "minHeight":"calc(100vh - 213px" }}>
                 <CurrencyProvider>
                 <   CurrencyConverter />
                 </CurrencyProvider>

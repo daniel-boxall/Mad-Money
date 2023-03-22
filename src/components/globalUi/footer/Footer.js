@@ -27,7 +27,7 @@ function Footer() {
                         <ButtonMailto label={ <EmailIcon className="link" fontSize='large' />} mailto='mailto:danielboxall07@gmail.com'/>
                     </div>
                     <div className='column'>
-                        <h2 className='name'>Shah hoque</h2>
+                        <h2 className='name'>Shah Hoque</h2>
                         <Link target="_blank" to='#'><AccountBoxIcon className="link" fontSize='large' /></Link>
                         <Link target="_blank" to='https://linkedin.com/in/'><LinkedInIcon className="link" fontSize='large' /></Link>
                         <Link target="_blank" to='https://github.com/shah-hoque'><GitHubIcon className="link" fontSize='large'/></Link>

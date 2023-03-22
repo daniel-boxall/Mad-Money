@@ -33,7 +33,7 @@ This project is licensed under The MIT License
  - [dearbojack](https://www.github.com/dearbojack)   
  - [daniel-boxall](https://www.github.com/daniel-boxall)   
  - [shah-hoque](https://www.github.com/shah-hoque)
- -   
+  
 ## Tests
 N/A
 

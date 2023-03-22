@@ -26,23 +26,36 @@ function CurrencyConverter() {
   const codeFromCurrency = fromCurrency.split(" ")[1];
   const codeToCurrency = toCurrency.split(" ")[1];
   
-  // If firstAmount = true(not empty), call the currency API 
-  useEffect(() => {
+// Move the API call to a separate function
+async function fetchCurrencyRate(baseCurrency, targetCurrency) {
+  try {
+    const response = await axios("https://api.freecurrencyapi.com/v1/latest", {
+      params: {
+        base_currency: baseCurrency,
+        currencies: targetCurrency,
+        apikey: process.env.REACT_APP_CURRENCY_KEY,
+      },
+    });
+
+    // api result
+    const { data } = response.data;
+    return Number(data[targetCurrency]).toFixed(3);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// simplify useEffect & its dependency array
+useEffect(() => {
+  async function updateResultCurrency() {
     if (firstAmount) {
-      axios("https://api.freecurrencyapi.com/v1/latest", {
-        params: {
-          base_currency: codeFromCurrency,
-          currencies: codeToCurrency,
-          apikey: process.env.REACT_APP_CURRENCY_KEY,
-        },
-      })
-        .then((response) =>
-          setResultCurrency(Number(response.data.data[codeToCurrency]).toFixed(3)),
-          console.log(resultCurrency)
-        )
-        .catch((error) => console.log(error));
+      const rate = await fetchCurrencyRate(codeFromCurrency, codeToCurrency);
+      setResultCurrency(rate);
     }
-  }, [firstAmount, fromCurrency, toCurrency, codeFromCurrency, codeToCurrency, resultCurrency]);
+  }
+
+  updateResultCurrency();
+}, [firstAmount, codeFromCurrency, codeToCurrency]);
 
   // CSS styles for both boxes
   const boxStyles = {

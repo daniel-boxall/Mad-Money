@@ -16,9 +16,9 @@ A one stop shop for your tech stocks and currency conversions
 
 ## Images 
 
- ![placeholder1](./assets/readme-images/placeholder1.jpg) 
- ![placeholder2](./assets/readme-images/placeholder2.jpg) 
- ![placeholder3](./assets/readme-images/placeholder3.jpg)
+ ![Home](./assets/readme-images/home.jpg) 
+ ![Currency](./assets/readme-images/currency.jpg) 
+ ![Team](./assets/readme-images/team.jpg)
  
 ## Installation
 npm install

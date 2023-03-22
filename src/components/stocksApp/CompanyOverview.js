@@ -94,11 +94,11 @@ function CompanyOverview({ selectedCompany }) {
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper sx={{ p: 2 }}>
-          <Typography variant="subtitle1">Market Cap: {marketCap} {currency}</Typography>
-          <Typography variant="subtitle1">Gross Profit: {grossProfit} {currency}</Typography>
           <Typography variant="subtitle1">Currency: {currency} </Typography>
-          <Typography variant="subtitle1">52-Wk High: {fiftytwoWeekHigh} </Typography>
-          <Typography variant="subtitle1">52-Wk Low: {fiftytwoWeekLow}</Typography>
+          <Typography variant="subtitle1">Market Cap: ${marketCap}</Typography>
+          <Typography variant="subtitle1">Gross Profit: ${grossProfit}</Typography>
+          <Typography variant="subtitle1">52-Wk High: ${fiftytwoWeekHigh} </Typography>
+          <Typography variant="subtitle1">52-Wk Low: ${fiftytwoWeekLow}</Typography>
         </Paper>
       </Grid>
     </Grid>

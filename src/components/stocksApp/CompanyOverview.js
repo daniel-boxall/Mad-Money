@@ -74,12 +74,16 @@ function CompanyOverview({ selectedCompany }) {
   const description = overview['Description'];
   const sector = overview['Sector'];
 
-  
+
+  // Styling  
+  const companyOverV = {
+    paddingTop: '15px',
+  };
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
-        {selectedCompany && <Typography variant="h5">{selectedCompany} Overview</Typography>}
+        {selectedCompany && <Typography style={companyOverV} variant="h5">{selectedCompany} Overview</Typography>}
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper sx={{ p: 2 }}>

@@ -32,26 +32,23 @@ export default function CompanySelector() {
     backgroundColor: '#92B8F9',
     borderRadius: '7px',
     padding: '20px',
-
   };
-
 
   const stockTitle = {
     textAlign: 'left',
     paddingBottom: '10px',
     fontSize: '70px',
-    marginTop: '10rem',
+    marginTop: '5rem',
+    fontWeight: 'bold',
+
   };
 
   const stockBox = {
     paddingBottom: '15px',
     color: 'white',
+    fontWeight: 'bold',
+    fontSize: '20px',
   };
-
-  // const dropdownBox = {
-  //   // border: '10px',
-  //   color: 'white !important',
-  // };
 
 
 
@@ -65,17 +62,15 @@ export default function CompanySelector() {
       minHeight: '100%',
       width: '80%',
       margin: '0 auto',
-
+      paddingBottom: '50px',
     }}>
+
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
 
-
-        <Grid container spacing={2}>
-
+        <Grid container spacing={0}>
         <Grid item xs={12} style={firstGridStyle}>
 
-            {/* <h1 style={{ margin: 0 }}>Track top tech stocks </h1> */}
             <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
 
             <Autocomplete  
@@ -97,7 +92,7 @@ export default function CompanySelector() {
                       alt={`${option.value} logo`} 
                       src={option.logo} 
                     /> 
-                    {' '+ option.label}
+                    {option.label}
                   </Box>
                 );
               }}
@@ -113,7 +108,7 @@ export default function CompanySelector() {
 
         <Grid item xs={12}>
 
-            <CompanyOverview selectedCompany={selectedValue.value} />
+        <CompanyOverview selectedCompany={selectedValue.value} />
         <StockData selectedCompany={selectedValue.value} />
         </Grid>
 

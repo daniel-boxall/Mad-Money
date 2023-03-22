@@ -6,7 +6,7 @@ function Home() {
     return (
         <>
             <div className="body">
-                <div style={{"minHeight":"calc(100vh - 213px)"}}>
+                <div className="container">
                     <h1>Welcome! To Mad Money</h1>
                     <CompanySelector />
                 </div>

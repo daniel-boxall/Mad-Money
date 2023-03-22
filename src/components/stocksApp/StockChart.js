@@ -50,7 +50,7 @@ class StockChart extends React.Component {
     return (
       <div>
         <h1>StockChart</h1>
-        <div id="chart" style={{padding:"50px"}} />
+        <div id="chart" style={{"margin-bottom":"50px"}} />
       </div>
     );
   }

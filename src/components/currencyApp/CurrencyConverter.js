@@ -84,7 +84,8 @@ function CurrencyConverter() {
     padding: "4rem 2rem",
     boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)",
     position: "relative",
-    marginBottom: 0,
+    // marginTop: 0,
+    marginBottom: "20px"
   };
 
   // Currency converter elements where user input is collected and if there is a value in firstAmount then it will render the result

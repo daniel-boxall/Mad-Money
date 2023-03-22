@@ -39,8 +39,8 @@ export default function StockData({ selectedCompany }) {
   // to be used as chart legend
   const metaData = stockData['Meta Data'];
   const symbol = metaData['2. Symbol'];
-  const lastRefreshed = metaData['3. Last Refreshed'];
-  const timeZone = metaData['5. Time Zone'];
+  // const lastRefreshed = metaData['3. Last Refreshed'];
+  // const timeZone = metaData['5. Time Zone'];
 
   // monthly time series of the stock data for the chart
   const monthlyTimeSeries = stockData['Time Series (Daily)'];

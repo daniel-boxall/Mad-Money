@@ -36,8 +36,8 @@ function Footer() {
                     <div className='column'>
                         <h2 className='name'>Dali Han</h2>
                         <Link target="_blank" to='#'><AccountBoxIcon className="link" fontSize='large' /></Link>
-                        <Link target="_blank" to='https://linkedin.com/in/'><LinkedInIcon className="link" fontSize='large' /></Link>
-                        <Link target="_blank" to='https://github.com/dearbojack'><GitHubIcon className="link"fontSize='large'/></Link>
+                        <Link target="_blank" to='https://linkedin.com/in/'><LinkedInIcon className="link" /></Link>
+                        <Link target="_blank" to='https://github.com/dearbojack'><GitHubIcon className="link" fontSize='large'/></Link>
                         <ButtonMailto  label= { <EmailIcon className="link" fontSize='large' />} mailto='dali4han@gmail.com'/>
                     </div>
                 </div>

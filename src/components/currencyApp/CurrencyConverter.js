@@ -64,14 +64,13 @@ function CurrencyConverter() {
     updateResultCurrency();
   }, [firstAmount, codeFromCurrency, codeToCurrency]);
 
-
   const results = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    margin: '1rem'
+    margin: "1rem",
   };
- 
+
   // CSS styles for both boxes
   const boxStyles = {
     background: "#fdfdfd",
@@ -133,16 +132,42 @@ function CurrencyConverter() {
             sx={{ display: "flex", justifyContent: "center", margin: "auto" }}
           >
             <Container maxWidth="md" sx={boxStyles} style={results}>
-              <Typography variant="h5" sx={{fontSize: '4rem'}}>{fromCountryFlag} - {toCountryFlag}</Typography>
-              <Typography>1 {fromCountryCode} = {Number(resultCurrency * 1).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>5 {fromCountryCode} = {Number(resultCurrency * 5).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>10 {fromCountryCode} = {Number(resultCurrency * 10).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>20 {fromCountryCode} = {Number(resultCurrency * 20).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>50 {fromCountryCode} = {Number(resultCurrency * 50).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>100 {fromCountryCode} = {Number(resultCurrency * 100).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>500 {fromCountryCode} = {Number(resultCurrency * 500).toFixed(2)} {toCountryCode}</Typography>
-              <Typography>1000 {fromCountryCode} = {Number(resultCurrency * 1000).toFixed(2)} {toCountryCode}</Typography>
-              </Container>
+              <Typography variant="h5" sx={{ fontSize: "4rem" }}>
+                {fromCountryFlag} - {toCountryFlag}
+              </Typography>
+              <Typography>
+                1 {fromCountryCode} = {Number(resultCurrency * 1).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                5 {fromCountryCode} = {Number(resultCurrency * 5).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                10 {fromCountryCode} = {Number(resultCurrency * 10).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                20 {fromCountryCode} = {Number(resultCurrency * 20).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                50 {fromCountryCode} = {Number(resultCurrency * 50).toFixed(2)}{" "}
+                {toCountryCode}
+              </Typography>
+              <Typography>
+                100 {fromCountryCode} ={" "}
+                {Number(resultCurrency * 100).toFixed(2)} {toCountryCode}
+              </Typography>
+              <Typography>
+                500 {fromCountryCode} ={" "}
+                {Number(resultCurrency * 500).toFixed(2)} {toCountryCode}
+              </Typography>
+              <Typography>
+                1000 {fromCountryCode} ={" "}
+                {Number(resultCurrency * 1000).toFixed(2)} {toCountryCode}
+              </Typography>
+            </Container>
           </Grid>
         </Grid>
       </Grid>

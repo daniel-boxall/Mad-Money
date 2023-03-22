@@ -41,7 +41,7 @@ class StockChart extends React.Component {
     // reverse the array as is required by lightweight chart
     let data = monthlyData.reverse();
     // create new chart instance
-    this.chart = createChart(document.getElementById('chart'), { width: 600, height: 300 });
+    this.chart = createChart(document.getElementById('chart'), { width: 680, height: 300 });
     const lineSeries = this.chart.addLineSeries();
     lineSeries.setData(data);
   }
@@ -49,7 +49,7 @@ class StockChart extends React.Component {
   render() {
     return (
       <div>
-        <h1>StockChart</h1>
+        {/* <h1>StockChart</h1> */}
         <div id="chart" style={{"margin-bottom":"50px"}} />
       </div>
     );

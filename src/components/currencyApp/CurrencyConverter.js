@@ -20,7 +20,7 @@ function CurrencyConverter() {
 
   const fromCountryCode = fromCurrency.split(" ")[1];
   const toCountryCode = toCurrency.split(" ")[1];
-  const fromCountryFlag = toCurrency.split(" ")[0];
+  const fromCountryFlag = fromCurrency.split(" ")[0];
   const toCountryFlag = toCurrency.split(" ")[0];
 
   // default state of resultCurrency

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Box } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import StockData from './StockData.js';
 import CompanyOverview from './CompanyOverview.js';
 
@@ -28,24 +28,25 @@ export default function CompanySelector() {
 
 
   // STYLING
-  // const firstGridStyle = {
-  //   backgroundColor: '#92B8F9',
-  //   borderRadius: '7px',
-  //   padding: '20px',
+  const firstGridStyle = {
+    backgroundColor: '#92B8F9',
+    borderRadius: '7px',
+    padding: '20px',
 
-  // };
+  };
 
 
-  // const stockTitle = {
-  //   textAlign: 'left',
-  //   paddingBottom: '10px',
-  //   fontSize: '70px',
-  // };
+  const stockTitle = {
+    textAlign: 'left',
+    paddingBottom: '10px',
+    fontSize: '70px',
+    marginTop: '10rem',
+  };
 
-  // const stockBox = {
-  //   paddingBottom: '15px',
-  //   color: 'white',
-  // };
+  const stockBox = {
+    paddingBottom: '15px',
+    color: 'white',
+  };
 
   // const dropdownBox = {
   //   // border: '10px',
@@ -55,39 +56,71 @@ export default function CompanySelector() {
 
 
   return (
-    <div>
-      <h1>Company Selector</h1>
-      <Autocomplete
-        options={options}
-        getOptionLabel={(option) => option.label}
-        getOptionSelected={(option, value) => option.value === value.value}
-        disableClearable
-        fullWidth
-        onChange={handleChange}
-        renderOption={option => {
-          return (
-              <Box>
-                  <img 
-                    loading="lazy"
-                    width="12"
-                    height="12" 
-                    className="company-logo" 
-                    alt={`${option.value} logo`} 
-                    src={option.logo} 
-                  />
-                    {option.label}
-              </Box>
-          );
-      }}
-        renderInput={(params) => (
-          <TextField {...params} label="Select a company" variant="outlined" />
-        )}
-      />
-      {selectedValue && <p>You selected: {selectedValue.value}</p>}
-      <CompanyOverview selectedCompany={selectedValue.value} />
-      <StockData selectedCompany={selectedValue.value} />
-      
-    </div>
+    
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      minHeight: '100%',
+      width: '80%',
+      margin: '0 auto',
+
+    }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
+
+
+        <Grid container spacing={2}>
+
+        <Grid item xs={12} style={firstGridStyle}>
+
+            {/* <h1 style={{ margin: 0 }}>Track top tech stocks </h1> */}
+            <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
+
+            <Autocomplete  
+              options={options}
+              getOptionLabel={(option) => option.label}
+              getOptionSelected={(option, value) => option.value === value.value}
+              disableClearable
+              fullWidth
+              onChange={handleChange}
+              renderOption={option => {
+                return (
+                  
+                  <Box >
+                    <img 
+                      loading="lazy"
+                      width="12"
+                      height="12" 
+                      className="company-logo" 
+                      alt={`${option.value} logo`} 
+                      src={option.logo} 
+                    /> 
+                    {' '+ option.label}
+                  </Box>
+                );
+              }}
+              renderInput={(params) => (
+                <TextField {...params}
+                label="Select a stock" 
+                variant="outlined" 
+                />
+              )}
+            />
+        </Grid>
+
+
+        <Grid item xs={12}>
+
+            <CompanyOverview selectedCompany={selectedValue.value} />
+        <StockData selectedCompany={selectedValue.value} />
+        </Grid>
+
+        </Grid>
+
+      </div>
+      </div>
   );
   
   

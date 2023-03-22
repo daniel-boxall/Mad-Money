@@ -99,10 +99,6 @@ function CompanyOverview({ selectedCompany }) {
       </Grid>
     </Grid>
 
-    
-
-
-
   );
   
   

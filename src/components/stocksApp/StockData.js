@@ -48,11 +48,10 @@ export default function StockData({ selectedCompany }) {
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
   return (
     <div>
-      <h1>StockData component</h1>
-      <p>Symbol: {symbol}</p>
-      <p>Last Refreshed: {lastRefreshed}</p>
+      <h1>{symbol} Price</h1>
+      {/* <p>Last Refreshed: {lastRefreshed}</p>
       <p>Time Zone: {timeZone}</p>
-      <p>{lastRefreshed}</p>
+      <p>{lastRefreshed}</p> */}
       <StockChart seriesData={monthlyTimeSeries} />
     </div>
   );

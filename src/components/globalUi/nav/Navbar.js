@@ -30,7 +30,7 @@ function Navbar() {
                               Currency
                             </Link>
                         </li>
-                        <li ClassName='nav-item'>
+                        <li className='nav-item'>
                             <Link to='Team' className='nav-links' onClick={closeMobileMenu}>
                                 About Us
                             </Link>

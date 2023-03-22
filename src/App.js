@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../src/components/globalUi/footer/Footer.js'
+import './index.css'
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Currency from './pages/Currency';
@@ -21,7 +21,6 @@ function App() {
               <Route path='Currency' element={<Currency />} />
           </Routes>
         </div>
-        {<Footer/> }
       </Router>  
     </div>
   );

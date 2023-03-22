@@ -6,19 +6,36 @@
     );
 }
 
+.result1 {
+    margin: auto;
+    align-text: center;
+    border-radius: 0.5rem;
+}
+
+.card1 {
+    max-width: 21.875rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0.938 !important;
+    /* margin: 0 !important; */
+}
+
 .container {
     min-height: calc(100vh - 213px);
     margin: auto;
 }
 
 @media screen and (max-width: 820px) {
-    .container {
-        margin: 0.5rem;
+    .card {
+        max-width: 28.125rem;
+    }
+
+    .card1 {
+        max-width: 21.875rem;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        margin: 0.5rem;
+/* @media screen and (max-width: 600px) {
+    .card {
+        max-width: 450px;
     }
-}
+} */

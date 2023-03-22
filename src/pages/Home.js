@@ -7,7 +7,6 @@ function Home() {
         <>
             <div className="body">
                 <div className="container">
-                    <h1>Welcome! To Mad Money</h1>
                     <CompanySelector />
                 </div>
                 <div>

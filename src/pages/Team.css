@@ -3,7 +3,14 @@
     padding: 0;
     box-sizing: 0;
 }
-
+.about {
+    min-height: calc(100vh - 230px);
+    background: linear-gradient(
+        to top right,
+        rgba(165, 214, 175, 0.3),
+        rgba(172, 197, 232, 0.9)
+    );
+}
 .title {
     color: #426696;
     font-weight: 700;

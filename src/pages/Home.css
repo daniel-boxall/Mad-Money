@@ -1,0 +1,11 @@
+.body {
+    background: linear-gradient(
+        to top right,
+        rgba(165, 214, 175, 0.3),
+        rgba(172, 197, 232, 0.9)
+    );
+}
+
+.container {
+    min-height: calc(100vh - 213px);
+}

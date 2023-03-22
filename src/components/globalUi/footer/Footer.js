@@ -14,31 +14,31 @@ function Footer() {
                 <div className='row'>
                     <div className='column'>
                         <h2 className='name'>David Jones</h2>
-                        <Link target="_blank" to='https://davejonesuk.dev/'><AccountBoxIcon className="link" fontSize='large' /></Link>
-                        <Link target="_blank" to='https://linkedin.com/in/david-jones-751206257/'><LinkedInIcon className="link" fontSize='large' /></Link>
-                        <Link target="_blank" to='https://github.com/DJ-86'><GitHubIcon className="link" fontSize='large'/></Link>
-                        <ButtonMailto label={ <EmailIcon className="link" fontSize='large' />} mailto='mailto:davidmarkjones@gmail.com'/>
+                        <Link target="_blank" to='https://davejonesuk.dev/'><AccountBoxIcon className="link"  /></Link>
+                        <Link target="_blank" to='https://linkedin.com/in/david-jones-751206257/'><LinkedInIcon className="link"  /></Link>
+                        <Link target="_blank" to='https://github.com/DJ-86'><GitHubIcon className="link" /></Link>
+                        <ButtonMailto label={ <EmailIcon className="link" />} mailto='mailto:davidmarkjones@gmail.com'/>
                     </div>
                     <div className='column'>
                         <h2 className='name'>Daniel Boxall</h2>
-                        <Link  target="_blank" to='#'><AccountBoxIcon className="link" fontSize='large' /></Link>
-                        <Link  target="_blank" to='https://linkedin.com/in/daniel-boxall-34a951257'><LinkedInIcon className="link" fontSize='large' /></Link>
-                        <Link  target="_blank" to='https://github.com/daniel-boxall'><GitHubIcon className="link" fontSize='large'/></Link>
-                        <ButtonMailto label={ <EmailIcon className="link" fontSize='large' />} mailto='mailto:danielboxall07@gmail.com'/>
+                        <Link  target="_blank" to='#'><AccountBoxIcon className="link"  /></Link>
+                        <Link  target="_blank" to='https://linkedin.com/in/daniel-boxall-34a951257'><LinkedInIcon className="link" /></Link>
+                        <Link  target="_blank" to='https://github.com/daniel-boxall'><GitHubIcon className="link"/></Link>
+                        <ButtonMailto label={ <EmailIcon className="link" />} mailto='mailto:danielboxall07@gmail.com'/>
                     </div>
                     <div className='column'>
                         <h2 className='name'>Shah Hoque</h2>
-                        <Link target="_blank" to='#'><AccountBoxIcon className="link" fontSize='large' /></Link>
-                        <Link target="_blank" to='https://linkedin.com/in/'><LinkedInIcon className="link" fontSize='large' /></Link>
-                        <Link target="_blank" to='https://github.com/shah-hoque'><GitHubIcon className="link" fontSize='large'/></Link>
-                        <ButtonMailto label={ <EmailIcon className="link" fontSize='large' />} mailto='#'/>
+                        <Link target="_blank" to='#'><AccountBoxIcon className="link"  /></Link>
+                        <Link target="_blank" to='https://linkedin.com/in/'><LinkedInIcon className="link"  /></Link>
+                        <Link target="_blank" to='https://github.com/shah-hoque'><GitHubIcon className="link" /></Link>
+                        <ButtonMailto label={ <EmailIcon className="link"  />} mailto='#'/>
                     </div>
                     <div className='column'>
                         <h2 className='name'>Dali Han</h2>
-                        <Link target="_blank" to='#'><AccountBoxIcon className="link" fontSize='large' /></Link>
+                        <Link target="_blank" to='#'><AccountBoxIcon className="link"  /></Link>
                         <Link target="_blank" to='https://linkedin.com/in/'><LinkedInIcon className="link" /></Link>
-                        <Link target="_blank" to='https://github.com/dearbojack'><GitHubIcon className="link" fontSize='large'/></Link>
-                        <ButtonMailto  label= { <EmailIcon className="link" fontSize='large' />} mailto='dali4han@gmail.com'/>
+                        <Link target="_blank" to='https://github.com/dearbojack'><GitHubIcon className="link" /></Link>
+                        <ButtonMailto  label= { <EmailIcon className="link"  />} mailto='dali4han@gmail.com'/>
                     </div>
                 </div>
             </div>

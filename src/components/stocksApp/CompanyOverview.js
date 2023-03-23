@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Grid, Paper, Typography } from '@mui/material';
 
-
 function CompanyOverview({ selectedCompany }) {
   const [overview, setOverview] = useState({});
 
@@ -74,7 +73,6 @@ function CompanyOverview({ selectedCompany }) {
   const description = overview['Description'];
   const sector = overview['Sector'];
 
-
   // Styling  
   const companyOverV = {
     paddingTop: '15px',
@@ -102,11 +100,7 @@ function CompanyOverview({ selectedCompany }) {
         </Paper>
       </Grid>
     </Grid>
-  );
-  
-  
-  
-  
+  ); 
 }
 
 export default CompanyOverview;

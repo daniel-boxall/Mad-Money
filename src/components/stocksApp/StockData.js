@@ -49,20 +49,16 @@ export default function StockData({ selectedCompany }) {
 
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
 
-// Styling
-const chartStyle = {
-  fontSize: '25px',
-  padding: '12px',
-  paddingLeft: '0',
-};
-
+  // Styling
+  const chartStyle = {
+    fontSize: '25px',
+    padding: '12px',
+    paddingLeft: '0',
+  };
 
   return (
     <div>
       <h1 style={chartStyle}>{symbol} Stock Price</h1>
-      {/* <p>Last Refreshed: {lastRefreshed}</p>
-      <p>Time Zone: {timeZone}</p>
-      <p>{lastRefreshed}</p> */}
       <StockChart seriesData={monthlyTimeSeries} company={symbol} date={date}/>
     </div>
   );

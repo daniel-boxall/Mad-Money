@@ -26,7 +26,6 @@ export default function CompanySelector() {
     setSelectedValue(newValue);
   };
 
-
   // STYLING
   const firstGridStyle = {
     backgroundColor: '#92B8F9',
@@ -49,8 +48,6 @@ export default function CompanySelector() {
     fontWeight: 'bold',
     fontSize: '20px',
   };
-
-
 
   return (
     
@@ -114,9 +111,5 @@ export default function CompanySelector() {
       </div>
       </div>
   );
-  
-  
-  
-  
-  
+
 };

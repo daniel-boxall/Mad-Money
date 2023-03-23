@@ -59,7 +59,7 @@ const chartStyle = {
 
   return (
     <div>
-      <h1 style={chartStyle}>{symbol} Price</h1>
+      <h1 style={chartStyle}>{symbol} Stock Price</h1>
       {/* <p>Last Refreshed: {lastRefreshed}</p>
       <p>Time Zone: {timeZone}</p>
       <p>{lastRefreshed}</p> */}

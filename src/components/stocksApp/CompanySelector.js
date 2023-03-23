@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Box, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import StockData from './StockData.js';
 import CompanyOverview from './CompanyOverview.js';
 
@@ -82,8 +82,7 @@ export default function CompanySelector() {
               onChange={handleChange}
               renderOption={option => {
                 return (
-                  
-                  <Box >
+                  < >
                     <img 
                       loading="lazy"
                       width="12"
@@ -93,7 +92,7 @@ export default function CompanySelector() {
                       src={option.logo} 
                     /> 
                     {option.label}
-                  </Box>
+                  </>
                 );
               }}
               renderInput={(params) => (
@@ -104,12 +103,10 @@ export default function CompanySelector() {
               )}
             />
         </Grid>
-
-
+        
         <Grid item xs={12}>
-
-        <CompanyOverview selectedCompany={selectedValue.value} />
-        <StockData selectedCompany={selectedValue.value} />
+          <CompanyOverview selectedCompany={selectedValue.value} />
+          <StockData selectedCompany={selectedValue.value} />
         </Grid>
 
         </Grid>

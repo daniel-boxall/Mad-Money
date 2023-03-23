@@ -87,23 +87,24 @@ function CompanyOverview({ selectedCompany }) {
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper sx={{ p: 2 }}>
-          <Typography variant="subtitle1">Description: {description} </Typography>
-          <Typography variant="subtitle1">Sector: {sector} </Typography>
-          <Typography variant="subtitle1">Exchange: {exchange}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}> <strong>Description:</strong> {description} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}> <strong>Sector:</strong> {sector} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}> <strong>Exchange:</strong> {exchange}</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper sx={{ p: 2 }}>
-          <Typography variant="subtitle1">Currency: {currency} </Typography>
-          <Typography variant="subtitle1">Market Cap: ${marketCap}</Typography>
-          <Typography variant="subtitle1">Gross Profit: ${grossProfit}</Typography>
-          <Typography variant="subtitle1">52-Wk High: ${fiftytwoWeekHigh} </Typography>
-          <Typography variant="subtitle1">52-Wk Low: ${fiftytwoWeekLow}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>Currency:</strong> {currency} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>Market Cap:</strong> ${marketCap}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>Gross Profit:</strong> ${grossProfit}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>52-Wk High:</strong> ${fiftytwoWeekHigh} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>52-Wk Low:</strong> ${fiftytwoWeekLow}</Typography>
         </Paper>
       </Grid>
     </Grid>
-
   );
+  
+  
   
   
 }

@@ -6,19 +6,23 @@
 A one stop shop for your tech stocks and currency conversions
 
 ## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributors)
-- [Tests](#tests)
-- [Questions](#questions)
+- [Mad Money](#mad-money)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Images](#images)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributors](#contributors)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
 
 ## Images 
 
- ![Home](./assets/readme-images/home.jpg) 
- ![Currency](./assets/readme-images/currency.jpg) 
- ![Team](./assets/readme-images/team.jpg)
+ ![Home](./assets/readme-images/stock.jpg) 
+ ![Currency](./assets/readme-images/currencyx.jpg) 
+ ![Team](./assets/readme-images/aboutus.jpg)
  
 ## Installation
 npm install

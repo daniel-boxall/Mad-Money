@@ -1,5 +1,5 @@
-import React from 'react';
-import { createChart } from 'lightweight-charts';
+import React from "react";
+import { createChart } from "lightweight-charts";
 
 class StockChart extends React.Component {
   constructor(props) {
@@ -35,21 +35,63 @@ class StockChart extends React.Component {
     for (const key in seriesData) {
       let ele = {};
       ele.time = key;
-      ele.value = parseInt(seriesData[key]['4. close']);
+      ele.value = parseInt(seriesData[key]["4. close"]);
       monthlyData.push(ele);
     }
     // reverse the array as is required by lightweight chart
     let data = monthlyData.reverse();
     // create new chart instance
-    this.chart = createChart(document.getElementById('chart'), { width: 680, height: 300 });
-    const lineSeries = this.chart.addLineSeries();
-    lineSeries.setData(data);
+    this.chart = createChart(document.getElementById("chart"), {
+      width: 600,
+      height: 300,
+      layout: {
+        textColor: "#a5a9ad",
+        background: {
+          type: "solid",
+          color: "#FFFFFF",
+        },
+      },
+      rightPriceScale: {
+        scaleMargins: {
+          top: 0.3,
+          bottom: 0.25,
+        },
+      },
+      crosshair: {
+        vertLine: {
+          width: 2,
+          color: "#a5a9ad",
+          style: 0,
+        },
+        horzLine: {
+          visible: false,
+          labelVisible: false,
+        },
+      },
+      grid: {
+        vertLines: {
+          color: "rgba(42, 46, 57, 0)",
+        },
+        horzLines: {
+          color: "rgba(42, 46, 57, 0)",
+        },
+      },
+    });
+
+    var areaSeries = this.chart.addAreaSeries({
+      topColor: 'rgba(38, 198, 218, 0.56)',
+      bottomColor: 'rgba(38, 198, 218, 0.04)',
+      lineColor: 'rgba(38, 198, 218, 1)',
+      lineWidth: 2,
+      crossHairMarkerVisible: false,
+    });
+    areaSeries.setData(data);
   }
 
   render() {
     return (
       <div>
-        <div id="chart" style={{"marginBottom":"50px"}} />
+        <div id="chart" style={{ marginBottom: "50px" }} />
       </div>
     );
   }

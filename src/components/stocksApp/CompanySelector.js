@@ -108,7 +108,7 @@ export default function CompanySelector() {
 
         <Grid item xs={12}>
 
-        <CompanyOverview selectedCompany={selectedValue.value} />
+        {/* <CompanyOverview selectedCompany={selectedValue.value} /> */}
         <StockData selectedCompany={selectedValue.value} />
         </Grid>
 

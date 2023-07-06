@@ -32,15 +32,22 @@ export default function CompanySelector() {
     backgroundColor: '#92B8F9',
     borderRadius: '7px',
     padding: '20px',
+    margin: 'auto',
+    maxWidth: '75vw',
+
+  };
+
+  const width = {
+    maxWidth: '75vw',
   };
 
   const stockTitle = {
     textAlign: 'left',
     paddingBottom: '10px',
     fontSize: '70px',
+    maxWidth: '75vw',
     marginTop: '5rem',
     fontWeight: 'bold',
-
   };
 
   const stockBox = {
@@ -67,6 +74,12 @@ export default function CompanySelector() {
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
+
+
+
+        <Grid container spacing={2}>
+
+          <Grid item xs={12} style={firstGridStyle}>
 
         <Grid container spacing={0}>
         <Grid item xs={12} style={firstGridStyle}>
@@ -103,6 +116,11 @@ export default function CompanySelector() {
               )}
             />
         </Grid>
+
+
+
+        <Grid style={ width } item xs={12}>
+
         
         <Grid item xs={12}>
           <CompanyOverview selectedCompany={selectedValue.value} />

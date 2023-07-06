@@ -74,6 +74,15 @@ function CompanyOverview({ selectedCompany }) {
   const description = overview['Description'];
   const sector = overview['Sector'];
 
+  const overView = {
+    margin : 'auto',
+    maxWidth: '75vw',
+    padding: '0px',
+  };
+
+
+  return (
+    <Grid style={ overView} container spacing={2}
 
   // Styling  
   const companyOverV = {
@@ -82,6 +91,7 @@ function CompanyOverview({ selectedCompany }) {
 
   return (
     <Grid container spacing={1}>
+
       <Grid item xs={12}>
         {selectedCompany && <Typography style={companyOverV} variant="h5">{selectedCompany} Overview</Typography>}
       </Grid>

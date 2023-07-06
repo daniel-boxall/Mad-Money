@@ -8,4 +8,5 @@
 
 .container {
     min-height: calc(100vh - 213px);
+    max-width: 75vw;
 }

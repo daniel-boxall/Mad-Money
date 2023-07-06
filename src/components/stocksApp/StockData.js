@@ -44,10 +44,12 @@ export default function StockData({ selectedCompany }) {
 
   // monthly time series of the stock data for the chart
   const monthlyTimeSeries = stockData['Time Series (Daily)'];
-
+  const Data = {
+    maxWidth: '75vw',
+  }
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
   return (
-    <div>
+    <div style= { Data }>
       <h1>StockData component</h1>
       <p>Symbol: {symbol}</p>
       <p>Last Refreshed: {lastRefreshed}</p>

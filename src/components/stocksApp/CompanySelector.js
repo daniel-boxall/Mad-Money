@@ -32,15 +32,20 @@ export default function CompanySelector() {
     backgroundColor: '#92B8F9',
     borderRadius: '7px',
     padding: '20px',
+    margin: 'auto',
+    maxWidth: '75vw',
 
   };
 
+  const width = {
+    maxWidth: '75vw',
+  };
 
   const stockTitle = {
     textAlign: 'left',
     paddingBottom: '10px',
     fontSize: '70px',
-    marginTop: '10rem',
+    maxWidth: '75vw',
   };
 
   const stockBox = {
@@ -73,9 +78,9 @@ export default function CompanySelector() {
 
         <Grid container spacing={2}>
 
-        <Grid item xs={12} style={firstGridStyle}>
+          <Grid item xs={12} style={firstGridStyle}>
 
-            {/* <h1 style={{ margin: 0 }}>Track top tech stocks </h1> */}
+            
             <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
 
             <Autocomplete  
@@ -111,10 +116,10 @@ export default function CompanySelector() {
         </Grid>
 
 
-        <Grid item xs={12}>
+        <Grid style={ width } item xs={12}>
 
-            <CompanyOverview selectedCompany={selectedValue.value} />
-        <StockData selectedCompany={selectedValue.value} />
+          <CompanyOverview selectedCompany={selectedValue.value} />
+          <StockData selectedCompany={selectedValue.value} />
         </Grid>
 
         </Grid>

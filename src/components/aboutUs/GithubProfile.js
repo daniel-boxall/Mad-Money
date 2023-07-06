@@ -12,7 +12,7 @@ function GithubProfile({ username }) {
 
       try {
         const response = await axios.get(`https://api.github.com/users/${username}`);
-        console.log(response);
+        // console.log(response);
         setUserData(response.data);
         setIsLoading(false);
       } catch (error) {

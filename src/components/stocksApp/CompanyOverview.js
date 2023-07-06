@@ -82,33 +82,39 @@ function CompanyOverview({ selectedCompany }) {
 
 
   return (
-    <Grid style={ overView} container spacing={2}>
+    <Grid style={ overView} container spacing={2}
+
+  // Styling  
+  const companyOverV = {
+    paddingTop: '15px',
+  };
+
+  return (
+    <Grid container spacing={1}>
+
       <Grid item xs={12}>
-        {selectedCompany && <Typography variant="h5">{selectedCompany} Overview</Typography>}
+        {selectedCompany && <Typography style={companyOverV} variant="h5">{selectedCompany} Overview</Typography>}
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper sx={{ p: 2 }}>
-          <Typography variant="subtitle1">Description: {description} </Typography>
-          <Typography variant="subtitle1">Sector: {sector} </Typography>
-          <Typography variant="subtitle1">Exchange: {exchange}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}> <strong>Description:</strong> {description} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}> <strong>Sector:</strong> {sector} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}> <strong>Exchange:</strong> {exchange}</Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} md={6}>
         <Paper sx={{ p: 2 }}>
-          <Typography variant="subtitle1">Market Cap: {marketCap} {currency}</Typography>
-          <Typography variant="subtitle1">Gross Profit: {grossProfit} {currency}</Typography>
-          <Typography variant="subtitle1">Currency: {currency} </Typography>
-          <Typography variant="subtitle1">52-Wk High: {fiftytwoWeekHigh} </Typography>
-          <Typography variant="subtitle1">52-Wk Low: {fiftytwoWeekLow}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>Currency:</strong> {currency} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>Market Cap:</strong> ${marketCap}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>Gross Profit:</strong> ${grossProfit}</Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>52-Wk High:</strong> ${fiftytwoWeekHigh} </Typography>
+          <Typography variant="subtitle1" sx={{ mb: 1 }}><strong>52-Wk Low:</strong> ${fiftytwoWeekLow}</Typography>
         </Paper>
       </Grid>
     </Grid>
-
-    
-
-
-
   );
+  
+  
   
   
 }

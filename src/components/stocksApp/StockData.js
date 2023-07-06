@@ -41,6 +41,8 @@ export default function StockData({ selectedCompany }) {
   const symbol = metaData['2. Symbol'];
   const lastRefreshed = metaData['3. Last Refreshed'];
   const timeZone = metaData['5. Time Zone'];
+  const date = timeZone + " " + lastRefreshed;
+
 
   // monthly time series of the stock data for the chart
   const monthlyTimeSeries = stockData['Time Series (Daily)'];
@@ -48,14 +50,26 @@ export default function StockData({ selectedCompany }) {
     maxWidth: '75vw',
   }
   // example json output here: https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=IBM&apikey=demo
+
+// Styling
+const chartStyle = {
+  fontSize: '25px',
+  padding: '12px',
+  paddingLeft: '0',
+};
+
+
   return (
     <div style= { Data }>
       <h1>StockData component</h1>
       <p>Symbol: {symbol}</p>
       <p>Last Refreshed: {lastRefreshed}</p>
+    <div>
+      <h1 style={chartStyle}>{symbol} Stock Price</h1>
+      {/* <p>Last Refreshed: {lastRefreshed}</p>
       <p>Time Zone: {timeZone}</p>
-      <p>{lastRefreshed}</p>
-      <StockChart seriesData={monthlyTimeSeries} />
+      <p>{lastRefreshed}</p> */}
+      <StockChart seriesData={monthlyTimeSeries} company={symbol} date={date}/>
     </div>
   );
 }

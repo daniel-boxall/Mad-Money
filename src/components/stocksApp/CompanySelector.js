@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import TextField from '@material-ui/core/TextField';
-import { Box, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import StockData from './StockData.js';
 import CompanyOverview from './CompanyOverview.js';
 
 export default function CompanySelector() {
   const options = [
-    { value: 'AAPL', label: 'APPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
+    { value: 'AAPL', label: 'AAPL - Apple Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/AAPL.webp' },
     { value: 'MSFT', label: 'MSFT - Microsoft Corp', logo: 'https://companiesmarketcap.com//img/company-logos/64/MSFT.webp' },
     { value: 'AMZN', label: 'AMZN - Amazon.com, Inc.', logo: 'https://companiesmarketcap.com//img/company-logos/64/AMZN.webp' },
     { value: 'TSLA', label: 'TSLA - Tesla Inc', logo: 'https://companiesmarketcap.com//img/company-logos/64/TSLA.webp' },
@@ -46,17 +46,16 @@ export default function CompanySelector() {
     paddingBottom: '10px',
     fontSize: '70px',
     maxWidth: '75vw',
+    marginTop: '5rem',
+    fontWeight: 'bold',
   };
 
   const stockBox = {
     paddingBottom: '15px',
     color: 'white',
+    fontWeight: 'bold',
+    fontSize: '20px',
   };
-
-  // const dropdownBox = {
-  //   // border: '10px',
-  //   color: 'white !important',
-  // };
 
 
 
@@ -70,17 +69,21 @@ export default function CompanySelector() {
       minHeight: '100%',
       width: '80%',
       margin: '0 auto',
-
+      paddingBottom: '50px',
     }}>
+
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
+
 
 
         <Grid container spacing={2}>
 
           <Grid item xs={12} style={firstGridStyle}>
 
-            
+        <Grid container spacing={0}>
+        <Grid item xs={12} style={firstGridStyle}>
+
             <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
 
             <Autocomplete  
@@ -92,8 +95,7 @@ export default function CompanySelector() {
               onChange={handleChange}
               renderOption={option => {
                 return (
-                  
-                  <Box >
+                  < >
                     <img 
                       loading="lazy"
                       width="12"
@@ -102,8 +104,8 @@ export default function CompanySelector() {
                       alt={`${option.value} logo`} 
                       src={option.logo} 
                     /> 
-                    {' '+ option.label}
-                  </Box>
+                    {option.label}
+                  </>
                 );
               }}
               renderInput={(params) => (
@@ -116,8 +118,11 @@ export default function CompanySelector() {
         </Grid>
 
 
+
         <Grid style={ width } item xs={12}>
 
+        
+        <Grid item xs={12}>
           <CompanyOverview selectedCompany={selectedValue.value} />
           <StockData selectedCompany={selectedValue.value} />
         </Grid>

@@ -33,7 +33,7 @@ class StockChart extends React.Component {
   }
 
   createChart() {
-    const { seriesData, company, date  } = this.props;
+    const { seriesData, company, date } = this.props;
     let monthlyData = [];
     // handle api call data, create new array of objects for lightweight chart
     for (const key in seriesData) {
@@ -117,12 +117,11 @@ class StockChart extends React.Component {
     return (
       <div >
         <h1>StockChart</h1>
-        <div id="chart" style={{"margin-bottom":"50px"}} />
-      <div>
-        <div id="chart" style={{ marginBottom: "50px" }} />
+        <div id="chart" style={{ "margin-bottom": "50px" }} />
       </div>
-    );
+    )
   }
+  
 }
-
 export default StockChart;
+

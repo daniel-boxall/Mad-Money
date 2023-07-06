@@ -61,80 +61,77 @@ export default function CompanySelector() {
 
   return (
     
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      minHeight: '100%',
-      width: '80%',
-      margin: '0 auto',
-      paddingBottom: '50px',
-    }}>
+    // <div style={{
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   flexDirection: 'column',
+    //   minHeight: '100%',
+    //   width: '80%',
+    //   margin: '0 auto',
+    //   paddingBottom: '50px',
+    // }}></div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 style={stockTitle}>Track top tech stocks 🏛️</h1>
 
 
 
-        <Grid container spacing={2}>
+      <Grid container spacing={2}>
 
-          <Grid item xs={12} style={firstGridStyle}>
-
-        <Grid container spacing={0}>
         <Grid item xs={12} style={firstGridStyle}>
 
-            <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
+          <Grid container spacing={0}>
+            <Grid item xs={12} style={firstGridStyle}>
 
-            <Autocomplete  
-              options={options}
-              getOptionLabel={(option) => option.label}
-              getOptionSelected={(option, value) => option.value === value.value}
-              disableClearable
-              fullWidth
-              onChange={handleChange}
-              renderOption={option => {
-                return (
-                  < >
-                    <img 
-                      loading="lazy"
-                      width="12"
-                      height="12" 
-                      className="company-logo" 
-                      alt={`${option.value} logo`} 
-                      src={option.logo} 
-                    /> 
-                    {option.label}
-                  </>
-                );
-              }}
-              renderInput={(params) => (
-                <TextField {...params}
-                label="Select a stock" 
-                variant="outlined" 
-                />
-              )}
-            />
-        </Grid>
+              <h2 style={stockBox}> NASDAQ, NYSE, AMEX, BATS </h2>
+
+              <Autocomplete
+                options={options}
+                getOptionLabel={(option) => option.label}
+                getOptionSelected={(option, value) => option.value === value.value}
+                disableClearable
+                fullWidth
+                onChange={handleChange}
+                renderOption={option => {
+                  return (
+                    < >
+                      <img
+                        loading="lazy"
+                        width="12"
+                        height="12"
+                        className="company-logo"
+                        alt={`${option.value} logo`}
+                        src={option.logo}
+                      />
+                      {option.label}
+                    </>
+                  );
+                }}
+                renderInput={(params) => (
+                  <TextField {...params}
+                    label="Select a stock"
+                    variant="outlined"
+                  />
+                )}
+              />
+            </Grid>
 
 
 
-        <Grid style={ width } item xs={12}>
+            <Grid style={width} item xs={12}>
 
         
-        <Grid item xs={12}>
-          <CompanyOverview selectedCompany={selectedValue.value} />
-          <StockData selectedCompany={selectedValue.value} />
-        </Grid>
+              <Grid item xs={12}>
+                <CompanyOverview selectedCompany={selectedValue.value} />
+                <StockData selectedCompany={selectedValue.value} />
+              </Grid>
 
+            </Grid>
+          </Grid>
         </Grid>
+      </Grid>
 
-      </div>
-      </div>
-  );
-  
-  
-  
-  
-  
-};
+    </div>
+  )
+}

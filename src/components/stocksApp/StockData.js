@@ -60,11 +60,10 @@ const chartStyle = {
 
 
   return (
-    <div style= { Data }>
+    <div>
       <h1>StockData component</h1>
       <p>Symbol: {symbol}</p>
       <p>Last Refreshed: {lastRefreshed}</p>
-    <div>
       <h1 style={chartStyle}>{symbol} Stock Price</h1>
       {/* <p>Last Refreshed: {lastRefreshed}</p>
       <p>Time Zone: {timeZone}</p>
